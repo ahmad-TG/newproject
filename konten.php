@@ -1,25 +1,22 @@
 <?php
    if(!defined('INDEX')) die("");
 
-   $halaman = array("dashboard", 
-      "pegawai", 
-      "galeri","kabar_desa",
-      "kegiatan","layanan_publik", "struktur","user",
+   $halaman = array(
+      // url admin
+      "user","user_tambah", "user_insert","user_hapus","user_update","user_edit",
+      "galeri","galeri_tambah", "galeri_insert","galeri_hapus","galeri_update","galeri_edit",
+      "kabar_desa","kabardesa_tambah", "kabardesa_insert","kabardesa_hapus","kabardesa_update","kabardesa_edit",
+      "struktur","struktur_tambah", "struktur_insert","struktur_hapus","struktur_update","struktur_edit",
+      "kegiatan","kegiatan_tambah", "kegiatan_insert","kegiatan_hapus","kegiatan_update","kegiatan_edit",
+      "layanan_publik","layananpublik_tambah", "layananpublik_insert","layananpublik_hapus","layananpublik_update","layananpublik_edit",
 
-      "user_tambah", "user_insert","user_hapus","user_update","user_edit",
-      "galeri_tambah", "galeri_insert","galeri_hapus","galeri_update","galeri_edit",
-      "kabardesa_tambah", "kabardesa_insert","kabardesa_hapus","kabardesa_update","kabardesa_edit",
-      "struktur_tambah", "struktur_insert","struktur_hapus","struktur_update","struktur_edit",
-      "kegiatan_tambah", "kegiatan_insert","kegiatan_hapus","kegiatan_update","kegiatan_edit",
-      "layananpublik_tambah", "layananpublik_insert","layananpublik_hapus","layananpublik_update","layananpublik_edit",
-
-      "pegawai_tambah", "pegawai_insert",
-      "pegawai_edit", "pegawai_update", "pegawai_hapus",
-      "jabatan", "jabatan_tambah", "jabatan_insert", 
-      "jabatan_edit", "jabatan_update", "jabatan_hapus");
+      // url dashboards
+      "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa",
+      "dash_galeridesa","dash_profile","dash_layananpublik","dash_kabarberita","dash_potretberita","first_dashboard"
+     );
 
    if(isset($_GET['hal'])) $hal = $_GET['hal'];
-   else $hal = "dashboard";
+   else $hal = "first_dashboard";
 
    foreach($halaman as $h){
       if($hal == $h){
