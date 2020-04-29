@@ -2,7 +2,7 @@
 <div>
 
    <div class="card ">
-      <img src="statics/banner.jpg" >
+      <img src="statics/banner.jpg" style="height:400px; width:100%">
    </div>
 
    <div class=" text-center mt-lg-5 font text-success">
@@ -60,36 +60,17 @@
       <div class="separator"></div>
    </div>
    <div class=" row justify-content-center py-3 ">
-      <div class="col-8">
-         <h3>Kabar Berita</h3>
+      <div class="col-9">
+         <div class="text-success"><h3><u>Kabar Berita</u></h3></div>
+         <div style="height:30px"></div>
+         
+         <div class="row">
+            
+         </div>
       </div>
    </div>
-
-   <div class="row py-5 justify-content-center ">
-     
-         <div class="col-4  ">
-            <div class="card cards  justify-content-center text-center" >
-               <img src="statics/menuprofil.png" class=" card-img-top" alt="...">
-               <div class="card-body">
-                  <h4>Profile</h4> 
-                  <p class="card-text ">Some quick example text to build on the card title and make up
-                     the bulk of the card's content.</p>
-               </div>
-            </div>
-         </div>
-   
-         <div class="col-4 justify-content-center  ">
-            <div class="card cards  text-center" >
-               <img src="statics/kabardesa.png" class=" card-img-top" alt="...">
-               <div class="card-body">
-                  <h4>Layanan Publik</h4> 
-                  <p class="card-text ">Some quick example text to build on the card title and make up
-                     the bulk of the card's content.</p>
-               </div>
-            </div>
-         </div>
-        
-</div>
+ 
+<div style="height:90px"></div>
       
 
 

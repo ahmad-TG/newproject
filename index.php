@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="css/dash_style.css" type="text/css">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
       <Style>
          .separator{
             margin-top:5px;
@@ -68,9 +70,9 @@
          </div>
        
       </div>
-      <!-- <footer class="bgr my-lg-5 ">
-         Copyright &copy; DesaKuduKeras
-      </footer> -->
+      <footer class="bg-success">
+         <div class="text-white"> Copyright &copy; DesaKuduKeras </div>
+      </footer>
       <script src="js/jquery-3.5.0.min.js"></script>
       <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
    </body>

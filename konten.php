@@ -11,7 +11,7 @@
       "layanan_publik","layananpublik_tambah", "layananpublik_insert","layananpublik_hapus","layananpublik_update","layananpublik_edit",
 
       // url dashboards
-      "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa",
+      "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa","dash_sejarah","dash_geografis","dash_pemerintahdesa",
       "dash_galeridesa","dash_profile","dash_layananpublik","dash_kabarberita","dash_potretberita","first_dashboard"
      );
 
