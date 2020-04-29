@@ -26,6 +26,9 @@
            width:220px;
            height:150px;
          }
+         .pd-top{
+            margin-top: 90px;
+         }
       </Style>
      
    </head>
@@ -64,10 +67,10 @@
       </header>
       
       <div class="container-fluid  ">
-         <div class="sp justify-content-center">
+         
+         <section class="main pd-top">
             <?php include "konten.php"; ?>
-            
-         </div>
+         </section>
        
       </div>
       <footer class="bg-success">

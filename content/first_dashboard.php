@@ -1,9 +1,14 @@
 
 <div>
-
-   <div class="card ">
-      <img src="statics/banner.jpg" style="height:400px; width:100%">
+   <div class="row" id="box-search">
+      <div class="thumbnail justify-content-between">
+         <img src="statics/banner.jpg" style="height:500px; width:100%;">
+      </div>
    </div>
+
+   <!-- <div class="card ">
+      <img src="statics/banner.jpg" style="height:400px; width:100%">
+   </div> -->
 
    <div class=" text-center mt-lg-5 font text-success">
       #MenujuDesaMaju
@@ -71,7 +76,26 @@
    </div>
  
 <div style="height:90px"></div>
-      
+
+
+ <style>
+.thumbnail {
+    position: relative;
+    color: white;
+}
+
+.caption {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+}
+
+.btn-xl {
+    padding: 20px 70px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+</style>     
 
 
       
