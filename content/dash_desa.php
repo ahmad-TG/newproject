@@ -36,7 +36,8 @@
       <a href="?hal=dash_pemerintahdesa" role="button" class="btn btn-outline-success btn-xl"><b>Pemerintah Desas</b> </a>
    </div>
 </div>
-<div style="height:90px"></div>
+
+<div style="margin-bottom:5%;"></div>
 
 <style>
 .thumbnail {

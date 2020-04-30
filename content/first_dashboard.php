@@ -6,9 +6,7 @@
       </div>
    </div>
 
-   <!-- <div class="card ">
-      <img src="statics/banner.jpg" style="height:400px; width:100%">
-   </div> -->
+  <div style="height:50px"></div>
 
    <div class=" text-center mt-lg-5 font text-success">
       #MenujuDesaMaju
@@ -58,24 +56,65 @@
         
    </div>
 
-
-
-
    <div class=" row justify-content-center py-3 ">
       <div class="separator"></div>
    </div>
+
    <div class=" row justify-content-center py-3 ">
       <div class="col-9">
          <div class="text-success"><h3><u>Kabar Berita</u></h3></div>
          <div style="height:30px"></div>
+         <div class="row" >
+            <div class="col-5">
+               <div class="row" id="box-search">
+                  <div class="thumbnail">
+                     <img src="statics/berita.png">
+                     <div class="caption text-left">
+                        <div class="h6">tgl berita</div>
+                        <div style="height:10px"></div> 
+                        <div class="h4">Judul berita</div>
+                        <div class="h5">deskripsi berita singkat</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-5">
+               <div class="row row-cols-2">
+                  <div class="col">
+                     <img src="">
+                  </div>
+
+                  <div class="col">
+                     <div class="h7">tgl rilis berita</div>
+                     <div class="h5">Judul Berita</div>
+                     <div class="h6">ringakasan berita</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="height:50px"></div>
+         
+         <div class=" row justify-content-center py-3 ">
+            <div class="separator"></div>
+         </div>
+         
+         <div style="height:50px"></div>
+         <div class="text-success"><h3><u>Kabar Berita</u></h3></div>
+         <div style="height:30px"></div>
          
          <div class="row">
-            
+            <div class="col">
+               <img src="">
+            </div>
          </div>
+      
+      
+         <div style="height:50px"></div>
       </div>
    </div>
- 
-<div style="height:90px"></div>
+      
+
+   <div style="margin-bottom:5%;"></div>
 
 
  <style>
@@ -86,7 +125,7 @@
 
 .caption {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 50px;
 }
 
