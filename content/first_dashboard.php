@@ -19,7 +19,7 @@
    </div>
       
 
-   <div class="row py-lg-5 justify-content-center">
+   <div class="row py-lg-5 justify-content-center ">
          
       <div class="col-auto ">
          <div class="card cards  justify-content-center text-center" style="width: 18rem;">
@@ -99,12 +99,16 @@
          </div>
          
          <div style="height:50px"></div>
-         <div class="text-success"><h3><u>Kabar Berita</u></h3></div>
+         <div class="text-success"><h3><u>Potret Desa</u></h3></div>
          <div style="height:30px"></div>
          
-         <div class="row">
-            <div class="col">
-               <img src="">
+         <div class="row justify-content-center" id="box-search">
+         <div class="col-3">
+            <div class="thumbnail">
+               <img src="" style="max-height:150px; max-width:200px">
+                  <div class="textpotret text-center">
+                     <div class="h6">Judul Potret desa</div>
+                  </div>
             </div>
          </div>
       
@@ -121,6 +125,12 @@
 .thumbnail {
     position: relative;
     color: white;
+}
+
+.textpotret{
+   position: absolute;
+   top: 10%;
+   left: 10%;
 }
 
 .caption {
