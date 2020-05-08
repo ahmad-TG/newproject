@@ -16,11 +16,13 @@
       <title>Dashboard</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="plugin/datatables/index.css">
       <link rel="stylesheet" href="css/admin.css">
-      <!-- <link href="plugin/DataTables/css/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
-      <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-      <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+      
+      
+  
+  
+  
    </head>
    <body>
       <header>
@@ -36,7 +38,7 @@
                <li> <a href="?hal=kabar_desa">kabar desa</a> </li>
 		         <li> <a href="?hal=kegiatan">kegiatan</a> </li>
                <li> <a href="?hal=struktur">struktur</a> </li>
-               <li> <a href="logout.php">Keluar</a> </li>
+               <li> <a href="index.php">Keluar</a> </li>
             </ul>
          </aside>
          <section class="main">
@@ -47,6 +49,17 @@
          Copyright &copy; DesaKuduKeras
       </footer>
 
+      
+      
+      <script src="js/jquery.js"></script>
+      <script type="text/javascript" src="plugin/datatables/index.js"></script>
+      <script type="text/javascript" src="plugin/datatables/datatables1.js"></script>
+      <script type="text/javascript" src="plugin/datatables/datatables2.js"></script>
+      <script>
+        $(document).ready(function() {
+         $('.table').DataTable();
+      } );
+      </script>
       <!-- <script src="plugin/DataTables/js/jquery.dataTables.min.js"></script>
       <script src="plugin/DataTables/js/dataTables.bootstrap4.min.js"></script>
       <script src="js/jquery-3.5.0.min.js"></script>

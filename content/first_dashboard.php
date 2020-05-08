@@ -65,32 +65,56 @@
          <div class="text-success"><h3><u>Kabar Berita</u></h3></div>
          <div style="height:30px"></div>
          <div class="row" >
-            <div class="col-5">
+            <div class="col-7 ">
+            <?php
+               $query = mysqli_query($con, "SELECT  * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 1 ");
+               $no = 0;
+               while($data = mysqli_fetch_array($query)){
+                  $no++;
+            ?>
                <div class="row" id="box-search">
                   <div class="thumbnail">
-                     <img src="statics/berita.png">
-                     <div class="caption text-left">
-                        <div class="h6">tgl berita</div>
+                     <img src="images/<?= $data['foto'] ?>" width="520px" height="520px">
+                     <div class="caption text-primary text-left">
+                        <div class="h6"><?= $data['updateby'] ?></div>
                         <div style="height:10px"></div> 
-                        <div class="h4">Judul berita</div>
-                        <div class="h5">deskripsi berita singkat</div>
+                        <div class="h4"><?= $data['title'] ?></div>
+                        <div class="h5"><?= $data['uraian'] ?></div>
                      </div>
                   </div>
                </div>
+               <?php
+                  }
+               ?>
             </div>
-            <div class="col-5">
-               <div class="row row-cols-2">
-                  <div class="col">
-                     <img src="">
-                  </div>
 
-                  <div class="col">
-                     <div class="h7">tgl rilis berita</div>
-                     <div class="h5">Judul Berita</div>
-                     <div class="h6">ringakasan berita</div>
-                  </div>
+            <div class="col-5">
+            
+               <div class="row  row-cols-2">
+                  <?php
+                     $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 4  ");
+                     $no = 3;
+                     while($data = mysqli_fetch_array($query)){
+                        $no++;
+                  ?>
+                     <div class="col "  style="padding-bottom:10px">
+                        <img src="images/<?= $data['foto'] ?>" width="200px"  >
+                     </div>
+
+                     <div class="col ">
+                        <div class="h7"><?= $data['updateby'] ?></div>
+                        <div class="h5"><?= $data['title'] ?></div>
+                        <div class="h6"><?= $data['uraian'] ?></div>
+                     </div>
+                 
+                  <?php
+                     }
+                  ?>
                </div>
+              
+              
             </div>
+           
          </div>
          <div style="height:50px"></div>
          
