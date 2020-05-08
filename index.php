@@ -59,7 +59,10 @@
                   <a class="nav-link text-white"href="?hal=dash_kabardesa">KABAR DESA</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_galeridesa">GALERI DESA</a>
+                  <a class="nav-link text-white"href="?hal=dash_galeridesa">GALERI DESA</a><a >
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white" href="login.php">LOGIN</a>
                </li>
             </ul>
          </div>

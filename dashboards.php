@@ -16,7 +16,11 @@
       <title>Dashboard</title>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/admin.css">
+      <!-- <link href="plugin/DataTables/css/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+      <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+      <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
    </head>
    <body>
       <header>
@@ -36,12 +40,19 @@
             </ul>
          </aside>
          <section class="main">
-            <?php include "konten.php"; ?>
+            <?php include "admin.php"; ?>
          </section>
       </div>
       <footer>
          Copyright &copy; DesaKuduKeras
       </footer>
+
+      <!-- <script src="plugin/DataTables/js/jquery.dataTables.min.js"></script>
+      <script src="plugin/DataTables/js/dataTables.bootstrap4.min.js"></script>
+      <script src="js/jquery-3.5.0.min.js"></script>
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
+
+    
    </body>
 </html>
 <?php
