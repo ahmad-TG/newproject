@@ -19,7 +19,9 @@
          move_uploaded_file($lokasi, "images/".$foto);
          $query = mysqli_query($con, "INSERT INTO galeri SET
             foto = '$foto',
-            title = '$_POST[title]'
+            title = '$_POST[title]',
+            updateby='$_POST[updateby]',
+            updatetime='$_POST[updatetime]'
          ");
       }
    }
