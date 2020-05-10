@@ -88,11 +88,12 @@
                ?>
             </div>
 
-            <div class="col-5">
+            <div class="col-5" >
             
-               <div class="row  row-cols-2">
+               <div class="row  row-cols-2" >
                   <?php
-                     $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 4  ");
+                     $limit= 4;
+                     $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT $limit  ");
                      $no = 3;
                      while($data = mysqli_fetch_array($query)){
                         $no++;

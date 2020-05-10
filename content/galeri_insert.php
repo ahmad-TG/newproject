@@ -12,7 +12,7 @@
    }else{
       if($tipefile != "image/jpeg" and $tipefile != "image/jpg" and $tipefile != "image/png"){
          $error = "Tipe file tidak didukung!";
-      }elseif($ukuranfile >= 1000000){
+      }elseif($ukuranfile >= 5000000){
          echo $ukuranfile;
          $error = "Ukuran file terlalu besar (lebih dari 1MB)!";
       }else{
