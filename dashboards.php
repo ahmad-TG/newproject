@@ -32,6 +32,7 @@
          <aside>
             <ul class="menu">
                <li> <a href="?hal=dashboard" class="aktif">Dashboard</a> </li>
+               <li> <a href="?hal=profile" class="aktif">Profile</a> </li>
 		         <li> <a href="?hal=layanan_publik">layanan publik</a> </li>
                <li> <a href="?hal=user">Data user</a> </li>
 		         <li> <a href="?hal=galeri">galeri</a> </li>
