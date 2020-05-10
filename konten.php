@@ -13,7 +13,7 @@
       // "kabar_berita","kabarberita_tambah", "kabarberita_insert","kabarberita_hapus","kabarberita_update","kabarberita_edit",
 
       // url dashboards
-      "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa","dash_sejarah","dash_geografis","dash_pemerindahdesa",
+      "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa","dash_sejarah","dash_geografis","dash_pemerintahdesa",
       "dash_galeridesa","dash_profile","dash_layananpublik","dash_kabarberita","dash_potretberita","first_dashboard"
      );
 

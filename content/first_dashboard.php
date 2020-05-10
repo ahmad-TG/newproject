@@ -105,15 +105,13 @@
                      <div class="col ">
                         <div class="h7"><?= $data['updateby'] ?></div>
                         <div class="h5"><?= $data['title'] ?></div>
-                        <div class="h6"><?= $data['uraian'] ?></div>
+                        <div class="h6"><?= $data['uraian']?></div>
                      </div>
                  
                   <?php
                      }
                   ?>
                </div>
-              
-              
             </div>
            
          </div>

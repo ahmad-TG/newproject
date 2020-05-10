@@ -17,7 +17,7 @@
                 <img class="card-img-top"
                  src="images/<?= $data['foto'] ?>"
                   alt="Card image cap"
-                  style="width:350px;height:300px;padding-left:3px;padding-right:5px;padding-top:3px">
+                  style="padding-left:3px;padding-right:5px;padding-top:3px">
                 <div class="card-body" style="background-color:#04B404">
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="card-text text-white"><?= $data['title'] ?></p>
