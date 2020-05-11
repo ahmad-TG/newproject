@@ -75,7 +75,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
          <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <img src="statics/logo.png"  style="padding-top:20px" width="150" >
+                  <img src="statics/logo.png" width="150" >
                </li>
             </ul>
          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

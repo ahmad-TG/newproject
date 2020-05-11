@@ -1,12 +1,12 @@
       <div class="album py-5 bg-light">
        
-        <div class="container" style="padding-top:70px">
+        <div class="container" style="padding-top:30px">
 
-          <div style="height:50px"></div>
+          <!-- <div style="height:20px"></div> -->
           <div class="text-success"><h2><u>Galeri Desa</u></h2></div>
-          <div style="height:30px"></div>
+          <div style="height:20px"></div>
 
-          <div class="row" style="padding-top:10px">
+          <div class="row" style="padding-top:20px">
           <?php
             $query = mysqli_query($con, "SELECT * FROM galeri ORDER BY galeri.id DESC");
             while($data = mysqli_fetch_array($query)){
