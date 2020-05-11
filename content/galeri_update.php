@@ -7,6 +7,16 @@
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
 
+   function compress($source, $destination, $quality)
+   {
+       $info = getimagesize($source);
+       if ($info['mime'] == 'image/jpeg') $image = imagecreatefromjpeg($source);
+       elseif ($info['mime'] == 'image/gif') $image = imagecreatefromgif($source);
+       elseif ($info['mime'] == 'image/png') $image = imagecreatefrompng($source);
+       imagejpeg($image, $destination, $quality);
+       return $destination;
+   }
+
    $error = "";
    if($foto == "" || $title==""){
       echo "Tidak dapat update data!<br>";
@@ -14,15 +24,19 @@
    }else{
       if($tipefile != "image/jpeg" and $tipefile != "image/jpg" and $tipefile != "image/png"){
          $error = "Tipe file tidak didukung!";
-      }elseif($ukuranfile >= 5000000){
-         echo $ukuranfile;
-         $error = "Ukuran file terlalu besar (lebih dari 1MB)!";
       }else{
          $query = mysqli_query($con, "SELECT * FROM galeri WHERE id='$_POST[id]'");
          $data = mysqli_fetch_array($query);
          if(file_exists("images/$data[foto]")) unlink("images/$data[foto]");
 
-         move_uploaded_file($lokasi, "images/".$foto);
+         $tempdir = "images/";
+         // if (!file_exists($tempdir)) mkdir($tempdir, 0755);
+
+         //target file
+         $target_path = $tempdir . basename($foto);
+         compress($lokasi, $target_path, 45);
+
+         // move_uploaded_file($lokasi, "images/".$foto);
          $query = mysqli_query($con, "UPDATE galeri SET
             foto = '$foto',
             title = '$_POST[title]',
