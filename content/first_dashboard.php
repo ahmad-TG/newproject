@@ -73,8 +73,8 @@
                   $no++;
             ?>
                <div class="row" id="box-search">
-                  <div class="thumbnail">
-                     <img src="images/<?= $data['foto'] ?>" width="520px" height="520px">
+                  <div class="thumbnail bg-success">
+                     <img src="images/<?= $data['foto'] ?>" width="520px" height="520px" style="padding:3px">
                      <div class="caption text-primary text-left">
                         <div class="h6"><?= $data['updateby'] ?></div>
                         <div style="height:10px"></div> 
@@ -89,29 +89,34 @@
             </div>
 
             <div class="col-5" >
-            
-               <div class="row  row-cols-2" >
-                  <?php
+            <?php
                      $limit= 4;
                      $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT $limit  ");
                      $no = 3;
                      while($data = mysqli_fetch_array($query)){
                         $no++;
                   ?>
+            
+               <div class="row  row-cols-2" >
+                 
                      <div class="col "  style="padding-bottom:10px">
-                        <img src="images/<?= $data['foto'] ?>" width="200px"  >
+                        <img src="images/<?= $data['foto'] ?>" width="200px" height="150px" style="padding:3px;" >
                      </div>
 
                      <div class="col ">
-                        <div class="h7"><?= $data['updateby'] ?></div>
                         <div class="h5"><?= $data['title'] ?></div>
                         <div class="h6"><?= $data['uraian']?></div>
+                        <div class="d-flex justify-content-between align-items-center">
+                           <div class="h7">By <?= $data['updateby'] ?></div>
+                           <div class="h7"> <?= $data['updatetime'] ?></div>
+                        </div>
                      </div>
                  
-                  <?php
+               
+               </div>
+               <?php
                      }
                   ?>
-               </div>
             </div>
            
          </div>
