@@ -119,12 +119,60 @@
       </nav>
       
       <div class="container-fluid  ">
-         
          <section class="main">
             <?php include "konten.php"; ?>
          </section>
-       
       </div>
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-success ">
+         <div style="margin-left:10%; margin-right:10%; ">
+            <div class="row align-items-center  text-white">
+               <div class="col-auto">
+               <a class="nav-link  text-white active" href="?hal=dash_desa">Desa</a>
+               </div>
+
+               <div class="col-auto">
+               <a class="nav-link text-white"href="?hal=dash_statistik">Data</a>
+               </div>
+               
+               <div class="col-auto">
+                  <div class="h6">Laporan</div>
+               </div>
+
+               <div class="col"></div>
+
+               <!-- <div class="col-auto">
+                  <img src="statics/logo.png" width="150" >
+               </div> -->
+            </div>   
+      
+            <div class="row justify-content-center py-1 ">
+               <div class="separator" style="width:100%"></div>
+            </div>   
+
+            <div class="row align-items-center text-white">
+               <div class="col-auto">
+                  <div class="h6">©  2019 - Pemerintah Desa Kudukeras </div>
+               </div>
+               <div class="col"></div>
+               <div class="col-auto">
+                  <div class="h6">Email : pemdes@kudukeras.desa.id | Cirebon 
+               </div>
+            </div>
+         </div>
+      </nav>
+
+
+
+
+
+
+
+
+
+
+<!-- 
       <footer class="bg-success">
          <div style="margin-left:10%; margin-right:10%; ">
             <div class="row align-items-center text-white">
@@ -161,7 +209,7 @@
                </div>
             </div>
          </div>
-      </footer>
+      </footer>  -->
 
       <!-- <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.5.0.min.js"></script> -->

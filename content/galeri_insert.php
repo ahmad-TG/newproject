@@ -15,7 +15,7 @@
        imagejpeg($image, $destination, $quality);
        return $destination;
    }
-
+   
    $error = "";
    if($foto == ""){
       echo "<meta http-equiv='refresh' content='2; url=?hal=galeri_tambah'>";
@@ -31,12 +31,12 @@
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);
-
+         $dates=date("l, d-M-Y");
          $query = mysqli_query($con, "INSERT INTO galeri SET
             foto = '$foto',
             title = '$_POST[title]',
             updateby='$_POST[updateby]',
-            updatetime='$_POST[updatetime]'
+            updatetime='$dates'
          ");
       }
    }

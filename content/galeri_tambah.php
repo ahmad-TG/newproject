@@ -20,10 +20,10 @@
       <div class="input"><input style="width: 100%" rows="5" id="updateby" name="updateby"></input></div> 
    </div>
 
-   <div class="form-group">
+   <!-- <div class="form-group">
       <label for="nama">Update time</label>   
       <div class="input"><input style="width: 100%" rows="5" id="updatetime" name="updatetime"></input></div> 
-   </div>
+   </div> -->
 
    <div class="form-group">
       <input type="submit" value="Simpan" class="tombol simpan">

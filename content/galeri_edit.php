@@ -23,14 +23,14 @@
    </div>
 
    <div class="form-group">
-      <label for="nama">Title</label>   
+      <label for="nama">Update By</label>   
       <div class="input"><input style="width: 100%" rows="5" id="updateby" name="updateby" value="<?= $data['updateby'] ?>"></div> 
    </div>
 
-   <div class="form-group">
+   <!-- <div class="form-group">
       <label for="nama">Title</label>   
       <div class="input"><input style="width: 100%" rows="5" id="updatetime" name="updatetime" value="<?= $data['updatetime'] ?>"></div> 
-   </div>
+   </div> -->
 
    <div class="form-group">
       <input type="submit" value="Simpan" class="tombol simpan">

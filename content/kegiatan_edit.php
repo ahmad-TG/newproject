@@ -31,12 +31,12 @@
       </div> 
    </div>
 
-   <div class="form-group">
+   <!-- <div class="form-group">
       <label for="nama">Update Time</label>   
       <div class="input">
          <input type="text" id="updatetime" name="updatetime" value="<?= $data['updatetime'] ?>">
       </div> 
-   </div>
+   </div> -->
 
 
    <div class="form-group">

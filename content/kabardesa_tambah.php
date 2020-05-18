@@ -19,11 +19,11 @@
       <label for="nama">Update By</label>   
       <div class="input"><input style="width: 100%"  id="updateby" name="updateby"></div> 
    </div>
-
+<!-- 
    <div class="form-group">
       <label for="nama">Update Date</label>   
       <div class="input"><input style="width: 100%"  id="date" name="date"></div> 
-   </div>
+   </div> -->
 
    <div class="form-group">
       <label for="nama">Uraian</label>   

@@ -11,6 +11,8 @@
          <th>No</th>
          <th>Foto</th>
          <th>Title</th>
+         <th>Update By</th>
+         <th>Update Time</th>
          <th>Aksi</th>
       </tr>
    </thead>
@@ -25,6 +27,8 @@
          <td><?= $no ?></td>
          <td width="250"><img src="images/<?= $data['foto'] ?>" width="200" class="img-thumbnail"></td>
          <td><?= $data['title'] ?></td>
+         <td><?= $data['updateby'] ?></td>
+         <td><?= $data['updatetime'] ?></td>
          <td>
             <a class="tombol edit" href="?hal=galeri_edit&id=<?= $data['id'] ?>"> Edit </a>
             <a class="tombol hapus" href="?hal=galeri_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"> Hapus </a>

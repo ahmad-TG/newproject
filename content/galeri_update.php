@@ -35,13 +35,13 @@
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);
-
+         $dates = date("l, d-M-Y");
          // move_uploaded_file($lokasi, "images/".$foto);
          $query = mysqli_query($con, "UPDATE galeri SET
             foto = '$foto',
             title = '$_POST[title]',
             updateby = '$_POST[updateby]',
-            updatetime = '$_POST[updatetime]'
+            updatetime = '$dates'
          WHERE id='$_POST[id]'");
       }
    }

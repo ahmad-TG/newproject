@@ -3,7 +3,7 @@
 
    $halaman = array(
       // url admin
-      "dashboard",
+      "dashboard","profile",
       "user","user_tambah", "user_insert","user_hapus","user_update","user_edit",
       "galeri","galeri_tambah", "galeri_insert","galeri_hapus","galeri_update","galeri_edit",
       "kabar_desa","kabardesa_tambah", "kabardesa_insert","kabardesa_hapus","kabardesa_update","kabardesa_edit",
