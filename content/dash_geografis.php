@@ -7,7 +7,7 @@
    <div style="height:20px"></div>
    <div style="margin-left:2%;margin-bottom:20px;margin-right:2%;">
       <div class="bg-success" width="100%">
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31689.587908358226!2d108.717005378142!3d-6.866802524389756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f0615a350ff07%3A0x6f4bed3db22b7dbf!2sKudukeras%2C%20Kec.%20Babakan%2C%20Cirebon%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1589099062126!5m2!1sid!2sid"
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1486629079786!2d108.71943771414423!3d-6.872784469154543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f060fa911e37f%3A0xe3773d7e5342fd38!2sJl.%20Raya%20Pangeran%20Sutajaya%20No.146%2C%20Babakan%2C%20Kec.%20Babakan%2C%20Cirebon%2C%20Jawa%20Barat%2045191!5e0!3m2!1sid!2sid!4v1591190996887!5m2!1sid!2sid"
             width="100%" 
             height="500px"
            
