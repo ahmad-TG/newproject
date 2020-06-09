@@ -67,43 +67,7 @@
      
    </head>
    <body class="bgr">
-      <!-- <header class="bg-success fixed-top" >
-      <div class="row justify-content-between align-items-center">
-         <div class="col-1">
-            <img src="statics/logo.png" width="150" >
-         </div>
-         <div class="col-sm d-flex flex-row-reverse">
-            <ul class="nav heads">
-		      <li class="nav-item ">
-                  <a class="nav-link  text-white active" href="?hal=first_dashboard">HOME</a>
-               </li>
-               <li class="nav-item ">
-                  <a class="nav-link  text-white active" href="?hal=dash_desa">DESA</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_statistik">STATISTIK</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_layanandesa">LAYANAN DESA</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_potensidesa">POTENSI DESA</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_kabardesa">KABAR DESA</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white"href="?hal=dash_galeridesa">GALERI DESA</a><a >
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white" href="login.php">LOGIN</a>
-               </li>
-            </ul>
-         </div>
-      </div>
-      </header> -->
-
-      <nav class="navbar navbar-expand-lg navbar-light navs bg-success menus">
+      <nav class="navbar navbar-expand-lg navbar-light navs bg-success menus" style="z-index:2">
          <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
                   <img src="statics/logo.png"  style="padding-top:20px" width="150" >

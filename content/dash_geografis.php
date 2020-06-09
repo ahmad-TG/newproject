@@ -2,7 +2,7 @@
    if(!defined('INDEX')) die("");
 ?>
 
-<div style="margin:auto; padding-top:100px;">
+<div style="margin:auto; padding-top:100px;margin-top:-80px;">
    <div class="text-success"><h3><u>Geografis Kudukeras</u></h3></div>
    <div style="height:20px"></div>
    <div style="margin-left:2%;margin-bottom:20px;margin-right:2%;">
