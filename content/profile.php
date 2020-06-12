@@ -15,3 +15,5 @@
 
 
 </div>
+<h2 class="judul">Tampilan Dashboard</h2>
+<h2 class="judul">Tampilan Table</h2>

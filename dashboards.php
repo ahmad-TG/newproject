@@ -104,9 +104,9 @@
          </nav>
       </nav>
    
-      <div class="container-fluid h-100" style="padding-bottom:200px">
+      <div class="container-fluid h-100" style="margin-bottom:100px">
         <div class="row h-100">
-         <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block">
+         <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block" >
             
             <ul class="list-group  position-absolute list-group-flush" >
                <li class="list-group-item bg-dark"> 
@@ -116,7 +116,7 @@
                </li>
                <li class="list-group-item bg-dark"> 
                   <a class="nav-link text-white" href="?hal=profile">
-                     <i class="fas fa-user-cog mr-sm-2" style="font-size:20px;"></i> Profile
+                     <i class="fas fa-user-cog mr-sm-2" style="font-size:20px;"></i> Setting
                   </a> 
                </li>
                <li class="list-group-item bg-dark"> 
@@ -149,8 +149,9 @@
                      <i class="fas  mr-sm-2 fa-project-diagram " style="font-size:20px;"></i> struktur
                   </a> 
                </li>
-               <li class="list-group-item bg-dark"> 
-                  <a class="nav-link text-white" href="index.php">
+
+               <li class="list-group-item bg-dark" > 
+                  <a class="nav-link text-white" href="index.php" >
                      <i class="fas mr-sm-2 fa-sign-out-alt" style="font-size:20px;"></i> Keluar
                   </a> 
                </li>
@@ -158,17 +159,18 @@
          
          </nav>
 
-         <div  class="col-md-10 col-sm-9 offset-md-2 bodys offset-sm-3 mb-3" style="padding-bottom:50px;" >  
+         <div  class="col-md-10 col-sm-9 offset-md-2 bodys offset-sm-3 mb-3" style="padding-bottom:100px;" >  
            <section>
             <?php include "admin.php"; ?>
            </section>
          </div>
-         <div class=" fixed-bottom " style="background:#42BA40;">
+        
+        </div>
+      </div>  
+      
+      <div class=" fixed-bottom " style="background:#42BA40;">
             <p class="m-2 text-center text-white">Copyright &copy; Kudukeras</p>
          </div>
-        </div>
-      </div>
-     
      <!-- <div class=" fixed-bottom " style="background:#42BA40;">
       <p class="m-2 text-center text-white">Copyright &copy; Kudukeras</p>
      </div> -->

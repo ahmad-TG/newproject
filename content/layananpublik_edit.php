@@ -9,26 +9,34 @@
 <form method="post" action="?hal=layananpublik_update" enctype="multipart/form-data">
    <input type="hidden" name="id" value="<?= $data['id'] ?>">
    
-   <div class="form-group">
-      <label for="file">File</label>   
-      <div class="input">
-         <input type="file" id="file" name="file">
-         <object data="documents/<?= $data['file'] ?>" type="application/pdf"  width="100"></object>
+   <div class="form-group row">
+      <label for="File"  class="col-sm-2 col-form-label">File</label>   
+      <div class="col-sm-10">
+         <input type="file" class="form-control" id="File" name="File" >
+         <object data="documents/<?= $data['file'] ?>" class="my-2" type="application/pdf"  width="100"></object>
       </div>
    </div>
 
-   <div class="form-group">
-      <label for="nama">Title</label>   
-      <div class="input"><input style="width: 100%" id="title" name="title" value="<?= $data['title'] ?>"></div> 
+   <div class="form-group row">
+      <label for="nama_surat"  class="col-sm-2 col-form-label">Nama File</label>   
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="nama" name="nama_surat" value="<?= $data['nama_surat'] ?>" >
+      </div>
    </div>
 
-   <div class="form-group">
-      <label for="nama">Nama File</label>   
-      <div class="input"><input style="width: 100%" id="nama_surat" name="nama_surat" value="<?= $data['nama_surat'] ?>"></div> 
+   <div class="form-group row">
+      <label for="title"  class="col-sm-2 col-form-label">title</label>   
+      <div class="col-sm-10">
+         <input type="text" class="form-control" id="title" name="title" value="<?= $data['title'] ?>" >
+      </div>
    </div>
 
-   <div class="form-group">
-      <input type="submit" value="Simpan" class="tombol simpan">
-      <input type="reset" value="Batal" class="tombol reset">
+   <div class="form-group row justify-content-center mt-4">
+      <div class="col ">
+         <input type="submit" value="Simpan" class="btn btn-outline-primary mb-3 form-control">
+      </div>
+      <div class="col ">
+       <a type="reset"  href="?hal=layanan_publik" class="btn btn-outline-primary form-control">Batal</a>
+      </div>
    </div>
 </form>

@@ -111,17 +111,15 @@
                         $no++;
                   ?>
             
-                     <div class="clearfix py-2" style="background:#D8D8D8;">
-                        <img class="img2  pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" style="margin-top:-8px;margin-bottom:8px;margin-right:10px;">
-                        <p class="resjudul">
-                        <div class="h4 " style="margin-left:10px"><i><?= $data['title'] ?></i></div>
-                        <div class="h6" style="margin-left:10px;"><?= substr($data['uraian'],0, 50); ?></div>
-                        <!-- <div class="h6" style="margin-left:10px;"><?=$data['uraian']; ?></div> -->
-                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;font-size:14px;color:#6E6E6E">
-                           <div>By <?= $data['updateby']; ?></div>
-                           <div > <?= $data['updatetime']; ?></div>
+                     <div class="row no-gutters bg-light position-relative">
+                        <div class="col-md-6 mb-md-0 p-md-4">
+                           <img src="images/<?= $data['foto'] ?>" class="w-100" alt="...">
                         </div>
-                        <div class="h6 py-2" style="text-align:center;color:blue;"><a href="hhh">Baca Selengkapnya...</a></div>
+                        <div class="col-md-6 position-static p-4 pl-md-0">
+                           <h5 class="mt-0"><?= $data['title'] ?></h5>
+                           <p><?= substr($data['uraian'],0, 50); ?></p>
+                           <a href="#" class="stretched-link">Baca Selengkapnya...</a>
+                        </div>
                      </div>
                     
                      <p style="clear:right"/>
