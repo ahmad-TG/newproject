@@ -5,6 +5,8 @@
    $lokasi = $_FILES['foto']['tmp_name'];
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
+   $uraian =$_POST['uraian'];
+   // echo "$_POST[uraian]";
 
    
    function compress($source, $destination, $quality)
@@ -28,7 +30,7 @@
          // move_uploaded_file($lokasi, "images/".$foto);
          $tempdir = "images/";
          if (!file_exists($tempdir)) mkdir($tempdir, 0755);
-         $dates=date("l, d-M-Y");
+         $dates=date("d-M-Y");
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);
@@ -37,7 +39,7 @@
             title = '$_POST[title]',
             updateby ='$_POST[updateby]',
             updatetime = '$dates',
-            uraian = '$_POST[uraian]'
+            uraian = '$uraian'
          ");
       }
    }

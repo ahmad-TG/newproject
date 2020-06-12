@@ -2,7 +2,16 @@
 <div>
    <div class="row" id="box-search">
       <!-- <div class="thumbnail justify-content-between"> -->
-         <img src="statics/banner.jpg" class="banner" style=" width:100%;margin-top:-20px">
+      <?php
+      $id=1;
+      $lokasi="statics/";
+      $type='.jpg';
+      $query = mysqli_query($con, "SELECT * FROM dashboards WHERE id=$id");
+      $data = mysqli_fetch_array($query);
+      ?>
+    
+         <!-- <img src="statics/banner.jpg" class="banner" style="width:100%;margin-top:-30px;"> -->
+         <img src="<?= $lokasi.$data['image'].$type;?>" class="banner" style="width:100%;margin-top:-30px;" >
       <!-- </div> -->
    </div>
 
@@ -61,7 +70,7 @@
    </div>
 
    <div class=" row py-3 "  >
-      <div class="col" style="z-index: -1;">
+      <div class="col" >
          <div class="row justify-content-center" >
             <div class="col-8 py-3" max-width="200px">
                <div class="text-success subkabar"><h3><u>Kabar Berita</u></h3></div>
@@ -70,21 +79,22 @@
          </div>
        
          <div class="row justify-content-center" >
-            <div class="col-sm-4 py-3  kabarberitautama" style="background:#F2F2F2;margin-right:10px">
+            <div class="col-sm-4 py-3  kabarberitautama" style="background:#F2F2F2;margin-right:10px" >
                   <?php
                      $query = mysqli_query($con, "SELECT  * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 1 ");
                      $no = 0;
                      while($data = mysqli_fetch_array($query)){
                         $no++;
                   ?>
-                  <div class="clearfix py-2 "  >
-                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="645px" height="640px" style="margin-top:-8px;margin-bottom:-8px;">
-                        <div class="h2" style="margin-left:10px;margin-top:20px"><?= $data['title'] ?></div>
-                        <div class="h4" style="margin-left:10px"><?= $data['uraian']?></div>
-                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px ">
+                  <div class="clearfix py-2 " max-width="645px"  >
+                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="560px" height="640px" style="margin-top:-8px;margin-bottom:-8px;">
+                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;margin-top:20px ">
                            <div>By <?= $data['updateby'] ?></div>
                            <div > <?= $data['updatetime'] ?></div>
                         </div>
+                        <div class="h2" style="margin-left:10px;margin-top:20px"><?= $data['title'] ?></div>
+                        <div class="h4" style="margin-left:10px;max-width:600px"><?= substr ($data['uraian'],0, 200)?></div>
+                        <div class="h5 py-2" style="text-align:center;color:blue;"><a href="hhh">Baca Selengkapnya...</a></div>
                         
                      </div>
                   <?php
@@ -93,6 +103,7 @@
             </div>
             <div class="col py-3 mobile " style="min-width:300px;max-width:500px;background:#F2F2F2;" >
                   <?php
+                    
                      $limit= 4;
                      $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT $limit  ");
                      $no = 3;
@@ -101,15 +112,16 @@
                   ?>
             
                      <div class="clearfix py-2" style="background:#D8D8D8;">
-                        <img class="img2  pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" style="margin-top:-8px;margin-bottom:-8px">
+                        <img class="img2  pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" style="margin-top:-8px;margin-bottom:8px;margin-right:10px;">
                         <p class="resjudul">
-                        <div class="h5 " style="margin-left:10px"><?= $data['title'] ?></div>
-                        <div class="h6" style="margin-left:10px;"><?= $data['uraian']?></div>
-                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px">
-                           <div>By <?= $data['updateby'] ?></div>
-                           <div > <?= $data['updatetime'] ?></div>
+                        <div class="h4 " style="margin-left:10px"><i><?= $data['title'] ?></i></div>
+                        <div class="h6" style="margin-left:10px;"><?= substr($data['uraian'],0, 50); ?></div>
+                        <!-- <div class="h6" style="margin-left:10px;"><?=$data['uraian']; ?></div> -->
+                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;font-size:14px;color:#6E6E6E">
+                           <div>By <?= $data['updateby']; ?></div>
+                           <div > <?= $data['updatetime']; ?></div>
                         </div>
-                        <div class="h6 py-2" style="text-align:center;color:blue;">Baca Selengkapnya</div>
+                        <div class="h6 py-2" style="text-align:center;color:blue;"><a href="hhh">Baca Selengkapnya...</a></div>
                      </div>
                     
                      <p style="clear:right"/>
@@ -117,6 +129,7 @@
                   <?php
                      }
                   ?>
+                  <div class="h4 py-2" style="text-align:center;"><u>Berita Lainnya</u></div>
             </div>
            
            

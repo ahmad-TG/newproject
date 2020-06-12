@@ -19,8 +19,9 @@
 
    $error = "";
    if($foto == "" || $title==""){
-      echo "Tidak dapat update data!<br>";
-      echo "<meta http-equiv='refresh' content='2; url=?hal=galeri_edit&id=$_POST[id]'>";
+      $query = mysqli_query($con, "UPDATE galeri SET
+      title = '$_POST[title]'
+      WHERE id='$_POST[id]'");
    }else{
       if($tipefile != "image/jpeg" and $tipefile != "image/jpg" and $tipefile != "image/png"){
          $error = "Tipe file tidak didukung!";

@@ -9,8 +9,10 @@
 
    $error = "";
    if($file == ""){
-      echo "Tidak dapat update data!<br>";
-      echo "<meta http-equiv='refresh' content='2; url=?hal=layananpublik_edit&id=$_POST[id]'>";
+      $query = mysqli_query($con, "UPDATE layanan_publik SET
+            title = '$title',
+            nama_surat = '$_POST[nama_surat]'
+            WHERE id='$_POST[id]'");
    }else{
       if($tipefile != "application/pdf"){
          $error = "Tipe file tidak didukung!";

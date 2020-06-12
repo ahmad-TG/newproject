@@ -5,7 +5,7 @@
    $lokasi = $_FILES['foto']['tmp_name'];
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
-
+   $dates=date(" d-M-Y");
    
    function compress($source, $destination, $quality)
    {
@@ -22,7 +22,7 @@
       $query = mysqli_query($con, "UPDATE kegiatan SET
          title = '$_POST[title]',
          updateby = '$_POST[updateby]',
-         updatetime = '$_POST[updatetime]',
+         updatetime = '$dates',
          uraian = '$_POST[uraian]'
       WHERE id='$_POST[id]'");
    }else{
@@ -35,7 +35,7 @@
 
          $tempdir = "images/";
          // if (!file_exists($tempdir)) mkdir($tempdir, 0755);
-         $dates=date("l, d-M-Y");
+        
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);

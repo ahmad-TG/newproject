@@ -6,6 +6,7 @@
    $lokasi = $_FILES['foto']['tmp_name'];
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
+   $dates = date(" d/M/Y");
 
    function compress($source, $destination, $quality)
    {
@@ -19,8 +20,12 @@
 
    $error = "";
    if($foto == "" || $title==""){
-      echo "Tidak dapat update data!<br>";
-      echo "<meta http-equiv='refresh' content='2; url=?hal=galeri_edit&id=$_POST[id]'>";
+      $query = mysqli_query($con, "UPDATE galeri SET
+            title = '$_POST[title]',
+            updateby = '$_POST[updateby]',
+            updatetime = '$dates'
+         WHERE id='$_POST[id]'");
+      
    }else{
       if($tipefile != "image/jpeg" and $tipefile != "image/jpg" and $tipefile != "image/png"){
          $error = "Tipe file tidak didukung!";
@@ -35,7 +40,7 @@
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);
-         $dates = date("l, d-M-Y");
+         
          // move_uploaded_file($lokasi, "images/".$foto);
          $query = mysqli_query($con, "UPDATE galeri SET
             foto = '$foto',

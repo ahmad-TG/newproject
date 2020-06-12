@@ -27,7 +27,7 @@
          // move_uploaded_file($lokasi, "images/".$foto);
          $tempdir = "images/";
          if (!file_exists($tempdir)) mkdir($tempdir, 0755);
-         $dates=date("l, d-M-Y");
+         $dates=date("d-M-Y");
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);

@@ -2,36 +2,38 @@
    if(!defined('INDEX')) die("");
 ?>
  
-<h2 class="judul">Galeri</h2>
-<a class="tombol" href="?hal=galeri_tambah">Tambah</a>
-
-<table class="table table-striped table-bordered" style="width:100%">
-   <thead class="thead-dark">
-      <tr>
+<h2 class="judul ml-sm-3">Galeri</h2>
+<a class="btn mb-4 btn-primary  ml-2" href="?hal=galeri_tambah"> <i class="fas fa-plus mr-sm-2" ></i>Tambah</a>
+<div class="table-responsive-lg">
+<table class="table table-striped table-bordered compact hover " style="width:100%">
+<caption>List of users</caption>
+   <thead style="background:#379538;">
+      <tr class="text-white">
          <th>No</th>
          <th>Foto</th>
          <th>Title</th>
          <th>Update By</th>
          <th>Update Time</th>
-         <th>Aksi</th>
+         <th width="280px;">Aksi</th>
       </tr>
    </thead>
    <tbody>
 <?php
-   $query = mysqli_query($con, "SELECT * FROM galeri ORDER BY galeri.id DESC");
+   $query = mysqli_query($con, "SELECT * FROM galeri order BY galeri.updatetime ");
    $no = 0;
    while($data = mysqli_fetch_array($query)){
       $no++;
 ?>
-      <tr>
+      <tr class="text-center">
          <td><?= $no ?></td>
-         <td width="250"><img src="images/<?= $data['foto'] ?>" width="200" class="img-thumbnail"></td>
+         <td width="250" class="text-center"><img src="images/<?= $data['foto'] ?>" width="200" class=" rounded "></td>
          <td><?= $data['title'] ?></td>
          <td><?= $data['updateby'] ?></td>
          <td><?= $data['updatetime'] ?></td>
          <td>
-            <a class="tombol edit" href="?hal=galeri_edit&id=<?= $data['id'] ?>"> Edit </a>
-            <a class="tombol hapus" href="?hal=galeri_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"> Hapus </a>
+            <a class="btn btn-primary mb-2" href="?hal=galeri_viewt&id=<?= $data['id'] ?>"> <i class="fas fa-eye"></i>View </a>
+            <a class="btn btn-success mb-2" href="?hal=galeri_edit&id=<?= $data['id'] ?>"> <i class="fas fa-edit"></i>Edit </a>
+            <a class="btn btn-danger mb-2" href="?hal=galeri_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"><i class="fas fa-trash-alt"></i> Hapus </a>
          </td>
      </tr>
 <?php
@@ -39,4 +41,5 @@
 ?>
    </tbody>
 </table>
+</div>
 

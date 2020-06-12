@@ -31,7 +31,7 @@
          //target file
          $target_path = $tempdir . basename($foto);
          compress($lokasi, $target_path, 45);
-         $dates=date("l, d-M-Y");
+         $dates=date("d-M-Y");
          $query = mysqli_query($con, "INSERT INTO galeri SET
             foto = '$foto',
             title = '$_POST[title]',

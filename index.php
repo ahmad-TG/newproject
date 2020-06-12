@@ -40,6 +40,9 @@
          background-color: #cae8ca;
          border: 2px solid #4CAF50;
          }
+         .fontsize{
+            font-size:13px;
+         }
 
          @media screen and (max-width: 480px){
             .menus{ 
@@ -67,10 +70,17 @@
      
    </head>
    <body class="bgr">
-      <nav class="navbar navbar-expand-lg navbar-light navs bg-success menus" style="z-index:1">
+      <?php
+      $id=1;
+      $query = mysqli_query($con, "SELECT * FROM dashboards WHERE id=$id");
+      $data = mysqli_fetch_array($query);
+      ?>
+     
+      
+      <nav class="navbar navbar-expand-lg navbar-light navs  <?= $data['warna_header'];?> menus" style="z-index:1">
          <ul class="navbar-nav mr-auto">
                <li class="nav-item active">
-                  <img src="statics/logo.png"  style="padding-top:20px" width="150" >
+                  <img src="statics/logo.png"  style="padding-top:7px" width="120" >
                </li>
             </ul>
          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,28 +92,28 @@
                <div class="col-sm d-flex flex-row-reverse">
                   <ul class="navbar-nav">
                      <li class="nav-item ">
-                        <a class="nav-link h6 text-white active" href="?hal=first_dashboard">HOME</a>
+                        <a class="nav-link fontsize text-white active" href="?hal=first_dashboard">HOME</a>
                      </li>
                      <li class="nav-item ">
-                        <a class="nav-link  h6 text-white " href="?hal=dash_desa">DESA</a>
+                        <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="?hal=dash_statistik">STATISTIK</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_statistik">STATISTIK</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="?hal=dash_layanandesa">LAYANAN DESA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_layanandesa">LAYANAN DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="?hal=dash_potensidesa">POTENSI DESA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_potensidesa">POTENSI DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >
+                        <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link h6 text-white" href="login.php">LOGIN</a>
+                        <a class="nav-link fontsize text-white" href="login.php">LOGIN</a>
                      </li>
                   </ul>
                </div>
@@ -128,23 +138,23 @@
             <div class="row align-items-center text-white">
                <div class="col-auto">
                <!-- <a class="nav-link text-white active" style="margin-left:50px" href="?hal=dash_desa">Desa</a> -->
-               <a class="h6  text-white" href="?hal=dash_desa" style="margin-left:50px">Desa</a>
+               <a class="fontsize  text-white" href="?hal=dash_desa" style="margin-left:50px">Desa</a>
                </div>
 
                <div class="col-auto">
                <!-- <a class="nav-link text-white" href="?hal=dash_statistik">Data</a> -->
-               <a class="h6  text-white" href="?hal=dash_statistik">Data</a>
+               <a class="fontsize  text-white" href="?hal=dash_statistik">Data</a>
                </div>
                
                <div class="col-auto">
                   <!-- <a class="nav-link text-white" href="?hal=dash_statistik">Laporan</a> -->
-                  <a class="h6  text-white" href="?hal=dash_statistik">Laporan</a>
+                  <a class="fontsize  text-white" href="?hal=dash_statistik">Laporan</a>
                </div>
 
                <div class="col"></div>
 
                <div class="col-auto hide" style="margin-right:50px">
-                  <img src="statics/logo.png" width="150" >
+                  <img src="statics/logo.png" width="120" >
                </div>
             </div>   
       
@@ -154,13 +164,13 @@
 
             <div class="row align-items-center text-white">
                <div class="col-auto">
-                  <!-- <div class="h6" style="margin-left:50px">©  2019 - Pemerintah Desa Kudukeras </div> -->
-                  <div class="h6 " >©  2019 - Pemerintah Desa Kudukeras </div>
+                  <!-- <div class="fontsize" style="margin-left:50px">©  2019 - Pemerintah Desa Kudukeras </div> -->
+                  <div class="fontsize " >©  2019 - Pemerintah Desa Kudukeras </div>
                </div>
                <div class="col"></div>
                <div class="col-auto">
-                  <!-- <div class="h6 hide" style="margin-right:50px;">Email : pemdes@kudukeras.desa.id | Cirebon  -->
-                  <div class="h6 " >Email : pemdes@kudukeras.desa.id | Cirebon
+                  <!-- <div class="fontsize hide" style="margin-right:50px;">Email : pemdes@kudukeras.desa.id | Cirebon  -->
+                  <div class="fontsize " >Email : pemdes@kudukeras.desa.id | Cirebon
                  
                </div>
             </div>
