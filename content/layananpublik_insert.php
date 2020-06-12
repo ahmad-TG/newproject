@@ -2,6 +2,7 @@
    if(!defined('INDEX')) die("");
 
    $file = $_FILES['file']['name'];
+   // $file=time().$filess;
    $lokasi = $_FILES['file']['tmp_name'];
    $tipefile = $_FILES['file']['type'];
    $ukuranfile = $_FILES['file']['size'];
@@ -10,8 +11,6 @@
    if($file == ""){
       echo "<meta http-equiv='refresh' content='2; url=?hal=layananpublik_tambah'>";
    }else{
-      // if($tipefile != "application/pdf" and $tipefile != "documents/docx"){
-      //    $error = "Tipe file tidak didukung!";
       if($ukuranfile >= 5000000){
          echo $ukuranfile;
          $error = "Ukuran file terlalu besar (lebih dari 5MB)!";

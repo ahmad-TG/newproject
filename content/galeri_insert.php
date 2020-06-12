@@ -2,10 +2,11 @@
    if(!defined('INDEX')) die("");
 
    $foto = $_FILES['foto']['name'];
+   // $foto=$filess.time();
    $lokasi = $_FILES['foto']['tmp_name'];
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
-
+   
    function compress($source, $destination, $quality)
    {
        $info = getimagesize($source);

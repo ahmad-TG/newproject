@@ -5,10 +5,17 @@
 <h2 class="judul">Tambah</h2>
 <form method="post" action="?hal=layananpublik_insert" enctype="multipart/form-data">
   
-   <div class="form-group row">
+   <!-- <div class="form-group row">
       <label for="File"  class="col-sm-2 col-form-label">File</label>   
       <div class="col-sm-10">
          <input type="file" class="form-control" id="File" name="File" >
+      </div>
+   </div> -->
+
+   <div class="form-group row">
+      <label for="file"  class="col-sm-2 col-form-label">File</label>   
+      <div class="col-sm-10">
+         <input type="file" class="form-control" id="file" name="file" >
       </div>
    </div>
 

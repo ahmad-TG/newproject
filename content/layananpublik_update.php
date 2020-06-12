@@ -2,6 +2,7 @@
    if(!defined('INDEX')) die("");
 
    $file = $_FILES['file']['name'];
+   // $file=time().$filess;
    $title=$_POST['title'];
    $lokasi = $_FILES['file']['tmp_name'];
    $tipefile = $_FILES['file']['type'];

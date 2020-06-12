@@ -10,9 +10,9 @@
    <input type="hidden" name="id" value="<?= $data['id'] ?>">
    
    <div class="form-group row">
-      <label for="File"  class="col-sm-2 col-form-label">File</label>   
+      <label for="file"  class="col-sm-2 col-form-label">File</label>   
       <div class="col-sm-10">
-         <input type="file" class="form-control" id="File" name="File" >
+         <input type="file" class="form-control" id="file" name="file" >
          <object data="documents/<?= $data['file'] ?>" class="my-2" type="application/pdf"  width="100"></object>
       </div>
    </div>

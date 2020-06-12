@@ -1,7 +1,8 @@
 <?php
    if(!defined('INDEX')) die("");
 
-   $foto = $_FILES['foto']['name'];
+   $filess = $_FILES['foto']['name'];
+   $foto=$filess.time();
    $lokasi = $_FILES['foto']['tmp_name'];
    $tipefile = $_FILES['foto']['type'];
    $ukuranfile = $_FILES['foto']['size'];
