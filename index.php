@@ -70,6 +70,7 @@
      
    </head>
    <body class="bgr">
+   
       <?php
       $id=1;
       $query = mysqli_query($con, "SELECT * FROM dashboards WHERE id=$id");
