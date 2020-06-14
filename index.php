@@ -98,9 +98,9 @@
                      <li class="nav-item ">
                         <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a>
                      </li>
-                     <li class="nav-item">
+                     <!-- <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_statistik">STATISTIK</a>
-                     </li>
+                     </li> -->
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_layanandesa">LAYANAN DESA</a>
                      </li>
@@ -108,13 +108,16 @@
                         <a class="nav-link fontsize text-white" href="?hal=dash_potensidesa">POTENSI DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR BERITA</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >
                      </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link fontsize text-white" href="#" data-toggle="modal" data-target="#staticBackdrop">BANTUAN</a><a >
+                     </li> -->
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="login.php">LOGIN</a>
+                        <a class="nav-link fontsize text-white" href="login.php" >LOGIN</a>
                      </li>
                   </ul>
                </div>
@@ -123,7 +126,7 @@
          </div>
          
       </nav>
-      
+
       <div class="container-fluid  ">
          
          <section class="main">

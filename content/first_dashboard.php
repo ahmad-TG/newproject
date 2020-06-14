@@ -157,11 +157,54 @@
       </div>
    </div>
       
+   <!-- <button class="btn btn-primary circle fixed-bottom" style="margin-bottom:50px;" type="submit">Button</button> -->
+   <!-- <?php $no=6285884110485;?>
+   <a class=" fixed-bottom btn-chat " href="sms:+6285884110485?body=Saya%20Order">Order Via SMS</a> -->
+   <!-- <a class=" fixed-bottom btn-chat " style="float:right"  href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin" role="button">
+       <img src="statics/live.png" alt="customer" class="width-img" style="float:right;" >
+   </a> -->
+
+   <a class=" fixed-bottom btn-chat " href="#" style="float:right" data-toggle="modal" data-target="#exampleModal"  role="button">
+       <img src="statics/live.png" alt="customer" class="width-img" style="float:right;" >
+   </a>
+  
+<!-- Modal -->
+<?php $no=6285884110485;?>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Chat Via</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
+            <button type="button" class="btn btn-outline-primary  form-control">Whatsap</button>
+         </a><p class="my-3">
+         <a class="  btn-chat " href="sms:+6285884110485?body=Hallo Admin"  role="button">
+             <button type="button" class="btn form-control btn-outline-primary"> SMS </button>
+         </a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
    <div style="margin-bottom:5%;"></div>
 
 
  <style>
+ .btn-chat{
+   margin-bottom:30px
+ }
+ .width-img{
+    width:10%;
+    margin-right:3%
+ }
 .thumbnail {
     position: relative;
     color: white;
@@ -192,6 +235,10 @@
     border-radius: 10px;
 }
 @media screen and (max-width: 480px){
+            .width-img{
+               width:30%;
+               margin-right:3%
+            }
             .kabarberita{ 
                background: red; 
                max-width:10rem;
@@ -219,6 +266,16 @@
                .subkabar{
                   text-align:left;
                }
+         }
+         @media screen and (min-width: 481px) and (max-width:650px) {
+           
+           /* .kabarberitautama{
+                 display:none;
+              } */
+              .width-img{
+                 width:20%;
+                 margin-right:3%
+              }
          }
          @media screen and (min-width: 481px) {
            
