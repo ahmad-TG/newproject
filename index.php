@@ -14,7 +14,8 @@
       <link rel="stylesheet" href="css/dash_style.css" type="text/css">
       <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="css/style.css">
-      
+      <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+
       <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
       <Style>

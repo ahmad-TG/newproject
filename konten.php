@@ -14,7 +14,7 @@
 
       // url dashboards
       "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa","dash_sejarah","dash_geografis","dash_pemerintahdesa",
-      "dash_galeridesa","dash_profile","dash_layananpublik","dash_kabarberita","dash_potretberita","first_dashboard"
+      "dash_galeridesa","dash_profile","dash_layananpublik","dash_kabarberita","dash_potretberita","first_dashboard","fullberita","allberita"
      );
 
    if(isset($_GET['hal'])) $hal = $_GET['hal'];

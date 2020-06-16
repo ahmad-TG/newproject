@@ -94,8 +94,7 @@
                         </div>
                         <div class="h2" style="margin-left:10px;margin-top:20px"><?= $data['title'] ?></div>
                         <div class="h4" style="margin-left:10px;max-width:600px"><?= substr ($data['uraian'],0, 200)?></div>
-                        <div class="h5 py-2" style="text-align:center;color:blue;"><a href="hhh">Baca Selengkapnya...</a></div>
-                        
+                        <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a>
                      </div>
                   <?php
                      }
@@ -122,7 +121,7 @@
                               <div > <?= $data['updatetime'] ?></div>
                            </div>
                            <p><?= substr($data['uraian'],0, 50); ?></p>
-                           <a href="#" class="stretched-link">Baca Selengkapnya...</a>
+                           <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a>
                         </div>
                      </div>
                     
@@ -131,7 +130,7 @@
                   <?php
                      }
                   ?>
-                  <div class="h4 py-2" style="text-align:center;"><u>Berita Lainnya</u></div>
+                  <div class="h4 py-2"  style="text-align:center;"><u>Berita Lainnya</u></div>
             </div>
            
            
