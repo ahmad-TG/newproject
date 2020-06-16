@@ -34,7 +34,7 @@
    <div class="form-group row">
       <label for="uraian"  class="col-sm-2 col-form-label">Uraian</label>   
       <div class="col-sm-10">
-         <textarea class="form-control" id="uraian" name="uraian" ><?= $data['updateby'] ?></textarea>
+         <textarea class="form-control" id="uraian" name="uraian" ><?= $data['uraian'] ?></textarea>
       </div>
    </div>
 
