@@ -79,7 +79,7 @@
          </div>
        
          <div class="row justify-content-center" >
-            <div class="col-sm-4 py-3  kabarberitautama" style="background:#F2F2F2;margin-right:10px" >
+            <div class="col-sm-4 py-3 bg-white kabarberitautama" style="margin-right:5px" >
                   <?php
                      $query = mysqli_query($con, "SELECT  * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 1 ");
                      $no = 0;
@@ -87,20 +87,25 @@
                         $no++;
                   ?>
                   <div class="clearfix py-2 " max-width="645px"  >
-                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="100%" style="margin-top:-8px;margin-bottom:-8px;">
-                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;margin-top:20px ">
-                           <div>By <?= $data['updateby'] ?></div>
-                           <div > <?= $data['updatetime'] ?></div>
+                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="100%" style="margin-top:-8px;margin-bottom:-8px;;">
+                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky;">
+                           
+                         <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
+                               <h3 class="mt-0" style="text-align:justify; padding-left:10px;padding-right:10px;"><?= $data['title'] ?></h3>
+                         </a>
+                           <div class="h5" style="margin-left:10px;max-width:600px;margin-top:20px;"><?= substr ($data['uraian'],0, 200)?></div>
+                           <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;margin-top:20px; ">
+                              <div>By <?= $data['updateby'] ?></div>
+                              <div > <?= $data['updatetime'] ?></div>
+                           </div>
+                           <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a> -->
                         </div>
-                        <div class="h2" style="margin-left:10px;margin-top:20px"><?= $data['title'] ?></div>
-                        <div class="h4" style="margin-left:10px;max-width:600px"><?= substr ($data['uraian'],0, 200)?></div>
-                        <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a>
                      </div>
                   <?php
                      }
                   ?>
             </div>
-            <div class="col py-2 mobile " style="min-width:300px;max-width:500px;background:#F2F2F2;" >
+            <div class="col pb-1 mobile " style="min-width:300px;max-width:500px;" >
                   <?php
                     
                      $limit= 3;
@@ -110,18 +115,21 @@
                         $no++;
                   ?>
             
-                     <div class="row no-gutters bg-light position-relative">
+                     <div class="row no-gutters bg-white  position-relative">
                         <div class="col-md-6 mb-md-0 p-md-4">
                            <img src="images/<?= $data['foto'] ?>" class="w-100" alt="...">
                         </div>
-                        <div class="col-md-6 position-static p-4 pl-md-0">
-                           <h5 class="mt-0"><?= $data['title'] ?></h5>
+                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0">
+                         <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
+                               <h5 class="mt-0 mb-uraian" ><?= $data['title'] ?></h5>
+                         </a>
+                          
+                           <p><?= substr($data['uraian'],0, 50); ?>...</p>
                            <div class="d-flex justify-content-between align-items-center" style="font-size:10px;margin-bottom:5px">
                               <div>By <?= $data['updateby'] ?></div>
                               <div > <?= $data['updatetime'] ?></div>
                            </div>
-                           <p><?= substr($data['uraian'],0, 50); ?></p>
-                           <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a>
+                           <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a> -->
                         </div>
                      </div>
                     
@@ -130,7 +138,10 @@
                   <?php
                      }
                   ?>
-                  <div class="h4 py-2"  style="text-align:center;"><u>Berita Lainnya</u></div>
+                  <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>"  >Baca Selengkapnya...</a> -->
+                  <div class="h4 py-2"  style="text-align:center;cursor: pointer;" > 
+                  <a href="?hal=allberita" > <u>Berita Lainnya</u></a>
+                 </div>
             </div>
            
            

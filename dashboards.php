@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-  
+    <!-- <link rel="stylesheet" href="plugin/chart/chart.css"> -->
   
     <style>
     .bodys{
@@ -95,11 +95,13 @@
                  <i class="fas  mr-2 fa-project-diagram " style="font-size:20px;"></i>Struktur
                </a> 
             </li>
+           
             <li class="nav-item"> 
                <a class="nav-link text-white" href="index.php">
                 <i class="fas mr-2 fa-sign-out-alt" style="font-size:20px;"></i> Keluar
                </a> 
             </li>
+            
          </ul>
          </nav>
       </nav>
@@ -108,7 +110,7 @@
         <div class="row h-100">
          <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block" >
             
-            <ul class="list-group  position-absolute list-group-flush" >
+            <ul class="list-group   list-group-flush" >
                <li class="list-group-item bg-dark"> 
                   <a class="nav-link text-white" href="?hal=dashboard">
                   <i class="fas fa-home mr-sm-2" style="font-size:20px;" ></i> Dashboard
@@ -150,6 +152,12 @@
                   </a> 
                </li>
 
+               <li class="list-group-item bg-dark"> 
+                  <a class="nav-link text-white" href="?hal=pengaturan">
+                     <i class="fas  mr-sm-2 fa-cogs " style="font-size:20px;"></i> Pengaturan
+                  </a> 
+               </li>
+
                <li class="list-group-item bg-dark" > 
                   <a class="nav-link text-white" href="index.php" >
                      <i class="fas mr-sm-2 fa-sign-out-alt" style="font-size:20px;"></i> Keluar
@@ -187,6 +195,7 @@
      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js" crossorigin="anonymous"></script>
 
    
+     <!-- <script src="plugin/chart/chart.js"></script> -->
 
      <script src="plugin/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
      <script src="plugin/summernote/summernote-bs4.min.js"></script>
@@ -199,6 +208,101 @@
            $('#tanggal').datepicker();
            $('#keterangan').summernote();
         });
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+         var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+               labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+               datasets: [{
+                     label: '# of Votes',
+                     data: [12, 19, 3, 5, 2, 3],
+                     backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                     ],
+                     borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                     ],
+                     borderWidth: 1
+               }]
+            },
+            options: {
+               scales: {
+                     yAxes: [{
+                        ticks: {
+                           beginAtZero: true
+                        }
+                     }]
+               }
+            }
+         });
+
+         var ctx = document.getElementById('myChart2').getContext('2d');
+         var myChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+               labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+               datasets: [{
+                   
+                     // barPercentage: 0.5,
+                     // barThickness: 6,
+                     // maxBarThickness: 8,
+                     // minBarLength: 2,
+                     label: '# of Votes',
+                     data: [12, 19, 3, 5, 2, 3],
+                     backgroundColor: ["#FF8000","#FF8000","#FF8000","#FF8000","#FF8000","#FF8000"
+                        // 'rgba(255, 99, 132, 0.2)',
+                        // 'rgba(54, 162, 235, 0.2)',
+                        // 'rgba(255, 206, 86, 0.2)',
+                        // 'rgba(75, 192, 192, 0.2)',
+                        // 'rgba(153, 102, 255, 0.2)',
+                        // 'rgba(255, 159, 64, 0.2)'
+                     ],
+                     // borderColor: [
+                     //    'rgba(255, 99, 132, 1)',
+                     //    'rgba(54, 162, 235, 1)',
+                     //    'rgba(255, 206, 86, 1)',
+                     //    'rgba(75, 192, 192, 1)',
+                     //    'rgba(153, 102, 255, 1)',
+                     //    'rgba(255, 159, 64, 1)'
+                     // ],
+                     // borderWidth: 1
+               }]
+            },
+            // circular:true;
+            options: {
+               scales: {
+                     // yAxes: [{
+                     //    ticks: {
+                     //       beginAtZero: true
+                     //    }
+                     // }]
+
+                     xAxes: [{
+                           gridLines: {
+                              offsetGridLines: true
+                           }
+                     }]
+
+                     // xAxes: [{
+                     //    stacked: true
+                     // }],
+                     // yAxes: [{
+                     //    stacked: true
+                     // }]
+               }
+            }
+         });
      </script>
    </body>
 </html>

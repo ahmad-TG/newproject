@@ -41,6 +41,7 @@
          background-color: #cae8ca;
          border: 2px solid #4CAF50;
          }
+
          .fontsize{
             font-size:13px;
          }
@@ -53,19 +54,37 @@
               .hide{
                  display:none;
               }
+              .mb{
+                 width:90%;
+                 background:white;
+                 margin-top:-60px
+              }
+              .mb-uraian{
+               text-align:justify;
+              }
               
          }
-         /* @media screen and (min-width: 480px) and (max-width: 960px){
+         @media screen and (min-width: 480px) and (max-width: 960px){
             
-            .show{
+            /* .show{
                display:none;
-            }
-         }  */
+            } */
+
+            .mb{
+                 width:90%;
+                 background:white;
+                 margin-top:-60px
+              }
+              .mb-uraian{
+               text-align:justify;
+              }
+         } 
          @media screen and (min-width: 960px){
             
             .show{
                display:none;
             }
+           
          }
       </Style>
      
