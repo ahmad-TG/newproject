@@ -62,6 +62,9 @@
               .mb-uraian{
                text-align:justify;
               }
+              .img-mb{
+               border: 5px solid white;
+              }
               
          }
          @media screen and (min-width: 480px) and (max-width: 960px){

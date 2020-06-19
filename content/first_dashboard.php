@@ -87,7 +87,7 @@
                         $no++;
                   ?>
                   <div class="clearfix py-2 " max-width="645px"  >
-                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="100%" style="margin-top:-8px;margin-bottom:-8px;;">
+                        <img class=" " src="images/<?= $data['foto'] ?>" alt="Pineapple" width="99%" style="border-radius: 8px;margin-top:-8px;margin-bottom:-8px;margin-left:2px;margin-right:2px;">
                         <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky;">
                            
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
@@ -116,8 +116,8 @@
                   ?>
             
                      <div class="row no-gutters bg-white  position-relative">
-                        <div class="col-md-6 mb-md-0 p-md-4">
-                           <img src="images/<?= $data['foto'] ?>" class="w-100" alt="...">
+                        <div class="col-md-6 mb-md-0 p-md-3">
+                           <img src="images/<?= $data['foto'] ?>" width="100%" class="img-mb" style="border-radius: 8px;" alt="...">
                         </div>
                         <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0">
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
