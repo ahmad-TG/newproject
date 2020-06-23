@@ -79,7 +79,7 @@
          </div>
        
          <div class="row justify-content-center" >
-            <div class="col-sm-4 py-3  kabarberitautama" style="background:#F2F2F2;margin-right:10px" >
+            <div class="col-sm-4 py-3 bg-white kabarberitautama" style="margin-right:5px" >
                   <?php
                      $query = mysqli_query($con, "SELECT  * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 1 ");
                      $no = 0;
@@ -87,38 +87,49 @@
                         $no++;
                   ?>
                   <div class="clearfix py-2 " max-width="645px"  >
-                        <img class=" pr-2" src="images/<?= $data['foto'] ?>" alt="Pineapple" width="560px" height="640px" style="margin-top:-8px;margin-bottom:-8px;">
-                        <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;margin-top:20px ">
-                           <div>By <?= $data['updateby'] ?></div>
-                           <div > <?= $data['updatetime'] ?></div>
+                        <img class=" " src="images/<?= $data['foto'] ?>" alt="Pineapple" width="99%" style="border-radius: 8px;margin-top:-8px;margin-bottom:-8px;margin-left:2px;margin-right:2px;">
+                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky;">
+                           
+                         <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
+                               <h3 class="mt-0" style="text-align:justify; padding-left:10px;padding-right:10px;"><?= $data['title'] ?></h3>
+                         </a>
+                           <div class="h5" style="margin-left:10px;max-width:600px;margin-top:20px;"><?= substr ($data['uraian'],0, 200)?></div>
+                           <div class="d-flex justify-content-between align-items-center" style="margin-left:10px;margin-right:10px;margin-top:20px; ">
+                              <div>By <?= $data['updateby'] ?></div>
+                              <div > <?= $data['updatetime'] ?></div>
+                           </div>
+                           <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a> -->
                         </div>
-                        <div class="h2" style="margin-left:10px;margin-top:20px"><?= $data['title'] ?></div>
-                        <div class="h4" style="margin-left:10px;max-width:600px"><?= substr ($data['uraian'],0, 200)?></div>
-                        <div class="h5 py-2" style="text-align:center;color:blue;"><a href="hhh">Baca Selengkapnya...</a></div>
-                        
                      </div>
                   <?php
                      }
                   ?>
             </div>
-            <div class="col py-3 mobile " style="min-width:300px;max-width:500px;background:#F2F2F2;" >
+            <div class="col pb-1 mobile " style="min-width:300px;max-width:500px;" >
                   <?php
                     
-                     $limit= 4;
+                     $limit= 3;
                      $query = mysqli_query($con, "SELECT * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT $limit  ");
                      $no = 3;
                      while($data = mysqli_fetch_array($query)){
                         $no++;
                   ?>
             
-                     <div class="row no-gutters bg-light position-relative">
-                        <div class="col-md-6 mb-md-0 p-md-4">
-                           <img src="images/<?= $data['foto'] ?>" class="w-100" alt="...">
+                     <div class="row no-gutters bg-white  position-relative">
+                        <div class="col-md-6 mb-md-0 p-md-3">
+                           <img src="images/<?= $data['foto'] ?>" width="100%" class="img-mb" style="border-radius: 8px;" alt="...">
                         </div>
-                        <div class="col-md-6 position-static p-4 pl-md-0">
-                           <h5 class="mt-0"><?= $data['title'] ?></h5>
-                           <p><?= substr($data['uraian'],0, 50); ?></p>
-                           <a href="#" class="stretched-link">Baca Selengkapnya...</a>
+                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0">
+                         <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
+                               <h5 class="mt-0 mb-uraian" ><?= $data['title'] ?></h5>
+                         </a>
+                          
+                           <p><?= substr($data['uraian'],0, 50); ?>...</p>
+                           <div class="d-flex justify-content-between align-items-center" style="font-size:10px;margin-bottom:5px">
+                              <div>By <?= $data['updateby'] ?></div>
+                              <div > <?= $data['updatetime'] ?></div>
+                           </div>
+                           <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>" class="stretched-link">Baca Selengkapnya...</a> -->
                         </div>
                      </div>
                     
@@ -127,7 +138,10 @@
                   <?php
                      }
                   ?>
-                  <div class="h4 py-2" style="text-align:center;"><u>Berita Lainnya</u></div>
+                  <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>"  >Baca Selengkapnya...</a> -->
+                  <div class="h4 py-2"  style="text-align:center;cursor: pointer;" > 
+                  <a href="?hal=allberita" > <u>Berita Lainnya</u></a>
+                 </div>
             </div>
            
            
@@ -138,7 +152,7 @@
             <div class="separator"></div>
          </div>
          
-         <div style="height:50px"></div>
+         <!-- <div style="height:50px"></div>
          <div class="text-success"><h3><u>Potret Desa</u></h3></div>
          <div style="height:30px"></div>
          
@@ -150,18 +164,54 @@
                      <div class="h6">Judul Potret desa</div>
                   </div>
             </div>
-         </div>
-      
-      
+         </div> -->
          <div style="height:50px"></div>
       </div>
    </div>
-      
+
+   <div class="row">
+    <div class="col-auto offset-9  rows fixed-bottom " style="margin-bottom:3%;cursor: pointer;" href="#" style="float:right" data-toggle="modal" data-target="#exampleModal"  role="button">
+      <img src="statics/live.png" alt="customer" class="width-img " min-width="200px" >
+    </div>
+  </div>
+  
+   <!-- Modal -->
+   <?php $no=+6285884110485;?>
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Chat Via</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+               <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
+                  <button type="button" class="btn btn-outline-primary  form-control">Whatsap</button>
+               </a><p class="my-3">
+               <a class="  btn-chat " href="sms:<?= $no ?>?body=Hallo Admin"  role="button">
+                  <button type="button" class="btn form-control btn-outline-primary"> SMS </button>
+               </a>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+         </div>
+      </div>
+   </div>
 
    <div style="margin-bottom:5%;"></div>
 
 
  <style>
+ .btn-chat{
+   margin-bottom:30px
+ }
+ .width-img{
+    width:100px;
+    margin-left:60%
+ }
 .thumbnail {
     position: relative;
     color: white;
@@ -192,33 +242,49 @@
     border-radius: 10px;
 }
 @media screen and (max-width: 480px){
+            .rows{
+               width:40%;
+            }
+            .width-img{
+               width:100px;
+               margin-left:-45%;
+            }
             .kabarberita{ 
                background: red; 
                max-width:10rem;
-               
-               }
-               .img2{
-                  width:350px;
-                  height:250px;
-               }
-               .judul{
-                  font-size:30px;
-               }
-               .titles{
-                  font-size:15px;
-               }
-               .banner{
-                  height:200px;
-               }
-               .kabarberitautama{
-                  display:none;
-               }
-               .resjudul{
-                  margin-top:250px;
-               }
-               .subkabar{
-                  text-align:left;
-               }
+            }
+            .img2{
+               width:350px;
+               height:250px;
+            }
+            .judul{
+               font-size:30px;
+            }
+            .titles{
+               font-size:15px;
+            }
+            .banner{
+               height:200px;
+            }
+            .kabarberitautama{
+               display:none;
+            }
+            .resjudul{
+               margin-top:250px;
+            }
+            .subkabar{
+               text-align:left;
+            }
+         }
+         @media screen and (min-width: 481px) and (max-width:650px) {
+           
+           .kabarberitautama{
+                 display:none;
+              }
+              .width-img{
+               width:120px;
+               margin-left:-25%;
+              }
          }
          @media screen and (min-width: 481px) {
            

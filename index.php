@@ -14,7 +14,8 @@
       <link rel="stylesheet" href="css/dash_style.css" type="text/css">
       <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="css/style.css">
-      
+      <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+
       <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
       <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
       <Style>
@@ -40,6 +41,7 @@
          background-color: #cae8ca;
          border: 2px solid #4CAF50;
          }
+
          .fontsize{
             font-size:13px;
          }
@@ -52,19 +54,40 @@
               .hide{
                  display:none;
               }
+              .mb{
+                 width:90%;
+                 background:white;
+                 margin-top:-60px
+              }
+              .mb-uraian{
+               text-align:justify;
+              }
+              .img-mb{
+               border: 5px solid white;
+              }
               
          }
-         /* @media screen and (min-width: 480px) and (max-width: 960px){
+         @media screen and (min-width: 480px) and (max-width: 960px){
             
-            .show{
+            /* .show{
                display:none;
-            }
-         }  */
+            } */
+
+            .mb{
+                 width:90%;
+                 background:white;
+                 margin-top:-60px
+              }
+              .mb-uraian{
+               text-align:justify;
+              }
+         } 
          @media screen and (min-width: 960px){
             
             .show{
                display:none;
             }
+           
          }
       </Style>
      
@@ -98,9 +121,9 @@
                      <li class="nav-item ">
                         <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a>
                      </li>
-                     <li class="nav-item">
+                     <!-- <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_statistik">STATISTIK</a>
-                     </li>
+                     </li> -->
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_layanandesa">LAYANAN DESA</a>
                      </li>
@@ -108,13 +131,16 @@
                         <a class="nav-link fontsize text-white" href="?hal=dash_potensidesa">POTENSI DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR BERITA</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >
                      </li>
+                     <!-- <li class="nav-item">
+                        <a class="nav-link fontsize text-white" href="#" data-toggle="modal" data-target="#staticBackdrop">BANTUAN</a><a >
+                     </li> -->
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="login.php">LOGIN</a>
+                        <a class="nav-link fontsize text-white" href="login.php" >LOGIN</a>
                      </li>
                   </ul>
                </div>
@@ -123,7 +149,7 @@
          </div>
          
       </nav>
-      
+
       <div class="container-fluid  ">
          
          <section class="main">
