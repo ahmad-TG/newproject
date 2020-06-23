@@ -14,7 +14,7 @@
          </div>
          <div class="row q-gutter-lg button-desktop ">
             <div class="col-auto mt-2">
-               <a href="?hal=dash_selengkapnya" class="btn btn-success btn-lg" role="button"><b>Selengkapnye</b> </a>
+               <a href="?hal=dash_profile" class="btn btn-success btn-lg" role="button"><b>Selengkapnya</b> </a>
             </div>
             
             <div class="col-auto  mt-2">
@@ -23,7 +23,7 @@
          </div>
 
          <div class="button-mobile  mt-5" style="margin:auto;"> 
-            <a class="btn btn-success btn-lg btn-block" href="?hal=dash_selengkapnya" role="button">Selengkapnye</a>
+            <a class="btn btn-success btn-lg btn-block" href="?hal=dash_profile" role="button">Selengkapnya</a>
             <a class="btn btn-success btn-lg btn-block" href="?hal=dash_datadesa" role="button">Data Desa</a>
          </div>
       </div>

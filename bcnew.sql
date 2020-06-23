@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2020 at 04:36 PM
+-- Generation Time: Jun 13, 2020 at 10:22 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -24,23 +24,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dashboards`
+--
+
+CREATE TABLE `dashboards` (
+  `id` int(11) NOT NULL,
+  `warna_header` text NOT NULL,
+  `image` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `dashboards`
+--
+
+INSERT INTO `dashboards` (`id`, `warna_header`, `image`) VALUES
+(1, 'bg-success', 'banner');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `galeri`
 --
 
 CREATE TABLE `galeri` (
   `id` int(11) NOT NULL,
   `foto` varchar(30) NOT NULL,
-  `title` text NOT NULL
+  `title` text NOT NULL,
+  `updateby` varchar(30) NOT NULL,
+  `updatetime` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `galeri`
---
-
-INSERT INTO `galeri` (`id`, `foto`, `title`) VALUES
-(6, 'desain.jpg', 'aaa'),
-(7, 'desain 22.jpg', 'sss'),
-(8, 'desain 22.aa.jpg', 'sss');
 
 -- --------------------------------------------------------
 
@@ -66,6 +78,21 @@ INSERT INTO `jabatan` (`id_jabatan`, `nama_jabatan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kabar_berita`
+--
+
+CREATE TABLE `kabar_berita` (
+  `id` int(11) NOT NULL,
+  `title` varchar(30) NOT NULL,
+  `foto` varchar(30) NOT NULL,
+  `updateby` varchar(30) NOT NULL,
+  `updatetime` varchar(30) NOT NULL,
+  `uraian` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kabar_desa`
 --
 
@@ -77,13 +104,6 @@ CREATE TABLE `kabar_desa` (
   `foto` varchar(30) NOT NULL,
   `uraian` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `kabar_desa`
---
-
-INSERT INTO `kabar_desa` (`id`, `title`, `updateby`, `updatetime`, `foto`, `uraian`) VALUES
-(4, 'renovai', 'admin', '2020-04-13', 'RUTILAHU (2).jpg', 'renovasi');
 
 -- --------------------------------------------------------
 
@@ -100,13 +120,6 @@ CREATE TABLE `kegiatan` (
   `uraian` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `kegiatan`
---
-
-INSERT INTO `kegiatan` (`id`, `title`, `updateby`, `updatetime`, `foto`, `uraian`) VALUES
-(4, 'renovasi', 'admin', '201920', 'rutilahu.jpg', 'renovasi');
-
 -- --------------------------------------------------------
 
 --
@@ -119,13 +132,6 @@ CREATE TABLE `layanan_publik` (
   `nama_surat` text NOT NULL,
   `file` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `layanan_publik`
---
-
-INSERT INTO `layanan_publik` (`id`, `title`, `nama_surat`, `file`) VALUES
-(6, 'test', 'Yessi herlistiana', 'berhasil update action.jpg');
 
 -- --------------------------------------------------------
 
@@ -167,23 +173,6 @@ CREATE TABLE `struktur` (
   `foto` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `struktur`
---
-
-INSERT INTO `struktur` (`id`, `sort`, `nama`, `jabatan`, `foto`) VALUES
-(5, '1', 'AHMAD SUSANTO', 'kepala', 'AHMAD SUSANTO KUDUKERAS.JPG'),
-(6, '2', 'ASEPUDIN KUDUKERAS', 'ANGGOTA', 'ASEPUDIN KUDUKERAS.JPG'),
-(7, '3', 'Darsan', 'Bendahara', 'DARSAN KUDUKERAS.JPG'),
-(8, '4', 'ENDI KUSWANDI', 'ANGGOTA', 'ENDI KUSWANDI KUDUKERAS.JPG'),
-(9, '6', 'HERI SUSANTO 2', 'ANGGOTA', 'HERI SUWANTO KUDUKERAS.JPG'),
-(10, '5', 'JAENUDIN', 'ANGGOTA', 'JAENUDIN KUDUKERAS.JPG'),
-(11, '7', 'KARSUN', 'ANGGOTA', 'KARSUN KUDUKERAS.JPG'),
-(12, '8', 'SUTRISNO', 'ANGGOTA', 'SUTRISNO KUDUKERAS.JPG'),
-(13, '9', 'TRESNAEDI', 'ANGGOTA', 'TRESNAEDI KUDUKERAS.JPG'),
-(14, '10', 'WARID', 'ANGGOTA', 'WARID KUDUKERAS.JPG'),
-(15, '11', 'YAYAN HERIYANA', 'ANGGOTA', 'YAYAN HERIYANA KUDUKERAS.JPG');
-
 -- --------------------------------------------------------
 
 --
@@ -202,11 +191,18 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `nama_lengkap`, `username`, `password`) VALUES
-(7, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3');
+(7, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(8, 'Super User', 'user', 'ee11cbb19052e40b07aac0ca060c23ee');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `dashboards`
+--
+ALTER TABLE `dashboards`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `galeri`
@@ -219,6 +215,12 @@ ALTER TABLE `galeri`
 --
 ALTER TABLE `jabatan`
   ADD PRIMARY KEY (`id_jabatan`);
+
+--
+-- Indexes for table `kabar_berita`
+--
+ALTER TABLE `kabar_berita`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `kabar_desa`
@@ -261,10 +263,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `dashboards`
+--
+ALTER TABLE `dashboards`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `jabatan`
@@ -273,22 +281,28 @@ ALTER TABLE `jabatan`
   MODIFY `id_jabatan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `kabar_berita`
+--
+ALTER TABLE `kabar_berita`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `kabar_desa`
 --
 ALTER TABLE `kabar_desa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `kegiatan`
 --
 ALTER TABLE `kegiatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `layanan_publik`
 --
 ALTER TABLE `layanan_publik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `pegawai`
@@ -300,13 +314,13 @@ ALTER TABLE `pegawai`
 -- AUTO_INCREMENT for table `struktur`
 --
 ALTER TABLE `struktur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

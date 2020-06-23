@@ -2,55 +2,76 @@
    if(!defined('INDEX')) die("");
 ?>
 
-
-<h2 class="judul">Data Kegiatan</h2>
-<a class="tombol" href="?hal=kegiatan_tambah">Tambah</a>
-
-<table class="table">
-   <thead>
-      <tr>
-         <th>No</th>
-         <th>Foto</th>
-         <th>Title</th>
-         <th>Update By</th>
-         <th>Update Time</th>
-         <th>uraian</th>
-         <th>Aksi</th>
-      </tr>
-   </thead>
-   <tbody>
+<!-- <div class="row" id="box-search" >
+<img src="statics/layananbanner.jpg" style="height:500px; width:100%;margin-top:-20px;">
+      <div class="caption text-left text-white responsives" > -->
+      <div class="text-success"><h2><b><u>Profile Desa</u></b></h2></div>
+<div style="height:20px"></div>
+<div class="fonts">
+<div class="row" style="padding-top:20px">
 <?php
-   $query = mysqli_query($con, "SELECT * FROM kegiatan ");
-   $no = 0;
-   while($data = mysqli_fetch_array($query)){
-      $no++;
 ?>
-      <tr>
-         <td><?= $no ?></td>
-         <td width="250"><img src="images/<?= $data['foto'] ?>" width="200"></td>
-         <td><?= $data['title'] ?></td>
-         <td><?= $data['updateby'] ?></td>
-         <td><?= $data['updatetime'] ?></td>
-         <td><?= $data['uraian'] ?></td>
-         <td>
-            <a class="tombol edit" href="?hal=kegiatan_edit&id=<?= $data['id'] ?>"> Edit </a>
-            <a class="tombol hapus" href="?hal=kegiatan_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"> Hapus </a>
-         </td>
-     </tr>
-<?php
-   }
-?>
-   </tbody>
-</table>
 
-<?php
-function potong_paragraf($text, $karakter=5){
-	$text = substr($text, 3, $karakter);
-	$text = substr($text, 3, strrpos($text, " "));
-	return $text;
-}	
 
-//Contoh penggunaan, paragraf otomatis terpotong pada spasi
-$paragraf = "text";
-echo substr ($paragraf,0, 6);
-?>
+
+<div class="col-md-12">
+   <div class="card mb -2 box" >
+   <div id="grad1">
+   <div class=" text-center mt-lg-3 ">MISI</div>
+   <div style="height:2px ; font-size:20px"></div>
+   <div id="center">
+<p>Terwujudnya Masyarakat Desa yang Makmur, Agamis, dan Berkeadilan, </p>
+<p>yang Didukung oleh Sarana Prasarana yang Memadai dan Aparatur Pemerintahan yang Handal.
+</p>
+</div>
+</div>
+
+<div class="col-md-13">
+   <div class="card mb -3 box">
+   <div id="grad2">
+      <div class=" text-center mt-lg-3">VISI</div>
+        <div style="height:2px ; font-size:20px"></div>
+        <div id="center1">
+           <p>1. Menyelenggarakan Urusan Pemerintahan Secara Profesional, Tertib Administrasi, dan Keuangan.</p>
+           <p>2. Meningkatkan Sumber Daya Manusia.</p>
+           <p>3. Meningkatkan dan Normalisasi Sarana Prasarana.</p>
+           <p>4. Meningkatkan Pendapatan Masyarakat.</p>
+           <p>5. Meningkatkan Hasil Perekonomian Masyarakat.</p>
+           <p>6. Meningkatkan Taraf Kesehatan Masyaralat.</p>
+           <p>7. Meningkatkan Tingkat Keimanan dan Ketaqwaan Masyarakat.</p>
+           <p>8. Meningkatkan Kesadaran Hukum dan Berbudi Pekerti Mulia.</p>
+          </div>
+     </div>
+
+ <!DOCTYPE html>
+ <html>
+<head>
+<style>
+#grad1 {
+   height: 200px;
+   background-color : #7fedab;
+   background-image: linear-gradient(#7fedab,#7bed68);
+}
+#grad2 {
+   height: 450px;
+   background-color : #7bed68;
+   background-image: linear-gradient(#7bed68,#7fedab);
+}
+#center{
+   padding : 20px 0px;
+   text-align: center;
+}
+#center1{
+   padding : 20px 0px;
+   text-align : center;
+   
+}
+#clearfix{
+   overflow: auto;
+}
+
+
+
+</style>
+</head>
+</html>

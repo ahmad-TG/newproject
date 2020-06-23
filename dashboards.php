@@ -114,6 +114,13 @@
                   <i class="fas fa-home mr-sm-2" style="font-size:20px;" ></i> Dashboard
                   </a>
                </li>
+               <!-- tambahan -->
+               <li class="list-group-item bg-dark"> 
+                  <a class="nav-link text-white" href="?hal=potensi_desa">
+                  <i class="fas fa-heart mr-sm-2" style="font-size:20px;" ></i> Potensi Desa
+                  </a>
+               </li>
+               <!-- sampai sini -->
                <li class="list-group-item bg-dark"> 
                   <a class="nav-link text-white" href="?hal=profile">
                      <i class="fas fa-user-cog mr-sm-2" style="font-size:20px;"></i> Setting
