@@ -76,7 +76,8 @@
             .mb{
                  width:90%;
                  background:white;
-                 margin-top:-60px
+                 margin-top:-60px;
+                 
               }
               .mb-uraian{
                text-align:justify;
@@ -173,10 +174,10 @@
                <a class="fontsize  text-white" href="?hal=dash_statistik">Data</a>
                </div>
                
-               <div class="col-auto">
+               <!-- <div class="col-auto"> -->
                   <!-- <a class="nav-link text-white" href="?hal=dash_statistik">Laporan</a> -->
-                  <a class="fontsize  text-white" href="?hal=dash_statistik">Laporan</a>
-               </div>
+                  <!-- <a class="fontsize  text-white" href="?hal=dash_statistik">Laporan</a> -->
+               <!-- </div> -->
 
                <div class="col"></div>
 

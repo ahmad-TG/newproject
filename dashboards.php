@@ -60,6 +60,13 @@
                   <i class="fas fa-home mr-2" style="font-size:20px;" ></i>Dashboard
                </a> 
             </li>
+
+            <li class="list-group-item bg-dark"> 
+                  <a class="nav-link text-white" href="?hal=potensi_desa">
+                  <i class="fas fa-heart mr-sm-2" style="font-size:20px;" ></i> Potensi Desa
+                  </a>
+               </li>
+               
             <li class="nav-item"> 
                <a class="nav-link text-white" href="?hal=profile">
                   <i class="fas fa-user-cog mr-2" style="font-size:20px;"></i>Profile
@@ -106,9 +113,9 @@
          </nav>
       </nav>
    
-      <div class="container-fluid h-100" style="margin-bottom:100px">
+      <div class="container-fluid h-100" style="margin-bottom:150px">
         <div class="row h-100">
-         <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block" >
+         <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block"  >
             
             <ul class="list-group   list-group-flush" >
                <li class="list-group-item bg-dark"> 

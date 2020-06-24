@@ -2,19 +2,34 @@
    if(!defined('INDEX')) die("");
 ?>
 
-<div class="album py-5 ">
-   <div class="text-success"><h2><u>Potensi Desa</u></h2></div>
+<div class="row" id="box-search" style="margin-top:-30px;">
+   <!-- <div class="thumbnail"> -->
+   <img src="statics/layananbanner.jpg" class="imgs" style="width:100%;height:400px;z-index:-2">
+         <div class="caption text-left text-white responsives" >
+         <div class="text-white"><h2><u>Potensi Desa</u></h2></div>
           <div style="height:20px"></div>
-    <div class="row" style="padding-top:20px">     
+            <div class="fonts">
+               <p>Temukan berbagai informasi administrasi kependudukan di laman ini.</p>
+            </div>
+         </div>
+      
+      <!-- </div> -->
+   <!-- </div> -->
+</div>
+
+<div class="album py-5 ">
+   <!-- <div class="text-success"><h2><u>Potensi Desa</u></h2></div>
+          <div style="height:20px"></div>
+    <div class="row" style="padding-top:20px">      -->
   
-       </div>
+       <!-- </div> -->
         
             
          
                 
                      <div class="row no-gutters bg-light position-relative">
                         <div class="col-md-6 mb-md-0 p-md-4">
-                           <img src="images/<?= $data['foto'] ?>" class="w-100" alt="...">
+                           <img src="images/1.png" class="w-100" alt="...">
                         </div>
                         <div class="col-md-6 position-static p-4 pl-md-0">
                            <h5 class="mt-0"><?= $data['title'] ?></h5>

@@ -88,7 +88,7 @@
                   ?>
                   <div class="clearfix py-2 " max-width="645px"  >
                         <img class=" " src="images/<?= $data['foto'] ?>" alt="Pineapple" width="99%" style="border-radius: 8px;margin-top:-8px;margin-bottom:-8px;margin-left:2px;margin-right:2px;">
-                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky;">
+                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky; border-radius: 8px">
                            
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
                                <h3 class="mt-0" style="text-align:justify; padding-left:10px;padding-right:10px;"><?= $data['title'] ?></h3>
@@ -119,7 +119,7 @@
                         <div class="col-md-6 mb-md-0 p-md-3">
                            <img src="images/<?= $data['foto'] ?>" width="100%" class="img-mb" style="border-radius: 8px;" alt="...">
                         </div>
-                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0">
+                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0" style="border-radius: 8px">
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
                                <h5 class="mt-0 mb-uraian" ><?= $data['title'] ?></h5>
                          </a>
@@ -146,27 +146,65 @@
            
            
          </div>
-         <div style="height:50px"></div>
          
-         <div class=" row justify-content-center py-3 ">
+         <!-- <div style="height:50px"></div> -->
+         
+         <div class=" row justify-content-center mt-5 py-2 ">
             <div class="separator"></div>
          </div>
-         
-         <!-- <div style="height:50px"></div>
-         <div class="text-success"><h3><u>Potret Desa</u></h3></div>
-         <div style="height:30px"></div>
-         
-         <div class="row justify-content-center" id="box-search">
-         <div class="col-3">
-            <div class="thumbnail">
-               <img src="" style="max-height:150px; max-width:200px">
-                  <div class="textpotret text-center">
-                     <div class="h6">Judul Potret desa</div>
+         <div class=" row  "  >
+            <div class="col" >
+               <div class="row justify-content-center" >
+                  <div class="col-8 py-3" max-width="200px">
+                     <div class="text-success mb-2"><h3><u>Potret Desa</u></h3></div>
+                     <!-- <div style="height:30px"></div> -->
                   </div>
+               </div>
+               <div class="row justify-content-center  mx-2" id="box-search">
+           
+                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/1.png">
+                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Judul Potret desa</div>
+                     </div>
+
+                     
+                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/1.png">
+                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Judul Potret desa</div>
+                     </div>
+
+                     
+                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/1.png">
+                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Judul Potret desa</div>
+                     </div>
+
+                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/1.png">
+                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Judul Potret desa</div>
+                     </div>
+
+                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/1.png">
+                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                        <div class="desc">Judul Potret desa</div>
+                     </div>
+
+                     
+               </div>
+
             </div>
-         </div> -->
-         <div style="height:50px"></div>
-      </div>
+         
+        
    </div>
 
    <div class="row">
@@ -205,6 +243,26 @@
 
 
  <style>
+ div.gallery {
+  margin: 5px;
+  border: 1px solid #777;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid black;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
  .btn-chat{
    margin-bottom:30px
  }
@@ -226,8 +284,8 @@
 
 .textpotret{
    position: absolute;
-   top: 10%;
-   left: 10%;
+   top: 0%;
+   left: 0%;
 }
 
 .caption {
