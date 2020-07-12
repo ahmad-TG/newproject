@@ -132,7 +132,7 @@
                         <a class="nav-link fontsize text-white" href="?hal=dash_potensidesa">POTENSI DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR BERITA</a>
+                        <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >

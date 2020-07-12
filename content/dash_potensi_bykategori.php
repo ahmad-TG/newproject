@@ -2,41 +2,39 @@
    <!-- <div class="thumbnail"> -->
    <img src="statics/layananbanner.jpg" class="imgs" style="width:100%;height:400px;z-index:-2">
          <div class="caption text-left text-white responsives" >
-         <div class="text-white"><h2><u>Struktur Pemerintahan </u></h2></div>
+         <div class="text-white"><h2><u>Potensi Desa Bidang <?php echo $_GET['kategori'];?></u></h2></div>
           <div style="height:20px"></div>
             <div class="fonts">
-               <p>Temukan berbagai informasi mengenai semua Kegiatan desa di laman ini.</p>
+               <p>Temukan berbagai informasi potensi desa bidang <?php echo $_GET['kategori'];?> di laman ini.</p>
             </div>
          </div>
       
       <!-- </div> -->
    <!-- </div> -->
 </div>
-          <div class=" row  mt-3"  >
-            <div class="col" >
-                <div class="row justify-content-center  mx-2" id="box-search">
-                      <?php
-                          $ids = mysqli_query($con, "SELECT * FROM struktur ORDER BY struktur.sort ");
-                          while($data = mysqli_fetch_array($ids)){
-                      ?>
-                          <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                                <a target="_blank" href="images/<?= $data['foto'];?>">
-                              <img src="images/<?= $data['foto'];?>" alt="Cinque Terre"  >
-                          </a>
-                            <div class="desc"><?= $data['nama'];?></div>
-                            <div style="font-size:20px;text-align:center"><?= $data['jabatan'];?></div>
-                        </div>
-                      <?php
-                    }
-                  ?>
+
+<div class=" row  "  >
+    <div class="col" >
+        <div class="row justify-content-center  mx-2" id="box-search">
+            <?php
+                $query = mysqli_query($con, "SELECT * FROM potensi_desa where kategori ='$_GET[kategori]' ");
+                while($data = mysqli_fetch_array($query)){
+            ?>
+                <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                     
+                        <a target="_blank" href="images/<?= $data['image'];?>">
+                           <img src="images/<?= $data['image'];?>" alt="Cinque Terre" width="600" height="400">
+                        </a>
+                    <div class="desc"><?= $data['title'];?></div>
                 </div>
-            </div>
+            <?php
+                }
+            ?>
         </div>
-      </div>
     </div>
+</div>
 
-
-      <style>
+<style>
  div.gallery {
   margin: 5px;
   border: 1px solid #777;
@@ -54,9 +52,7 @@ div.gallery img {
 }
 
 div.desc {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 15px;
   text-align: center;
 }
 .thumbnail {
@@ -147,4 +143,4 @@ div.desc {
                   display:none;
                }
          } */
-</style>
+</style>     
