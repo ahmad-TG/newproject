@@ -47,6 +47,13 @@
          }
 
          @media screen and (max-width: 480px){
+            
+            .bg-mb{
+               margin-left:-10px;
+               margin-right:-10px;
+               margin-bottom:-10px;
+               background:#42BA40;
+            }
             .menus{ 
                position: sticky;
                width:100%;
@@ -68,7 +75,13 @@
               
          }
          @media screen and (min-width: 480px) and (max-width: 960px){
-            
+           
+            .bg-mb{
+               margin-left:-10px;
+               margin-right:-10px;
+               margin-bottom:-10px;
+               background:#42BA40;
+            }
             /* .show{
                display:none;
             } */
@@ -111,7 +124,7 @@
          <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
          </button>
-         <div class="collapse navbar-collapse" id="navbarText">
+         <div class="collapse navbar-collapse bg-mb" id="navbarText">
             <div class="navbar-nav mr-auto"></div>
             <span class="navbar-text">
                <div class="col-sm d-flex flex-row-reverse">
@@ -122,9 +135,7 @@
                      <li class="nav-item ">
                         <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a>
                      </li>
-                     <!-- <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="?hal=dash_statistik">STATISTIK</a>
-                     </li> -->
+
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="?hal=dash_layanandesa">LAYANAN DESA</a>
                      </li>

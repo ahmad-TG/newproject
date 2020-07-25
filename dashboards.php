@@ -30,6 +30,12 @@
     <!-- <link rel="stylesheet" href="plugin/chart/chart.css"> -->
   
     <style>
+    .nav-item:hover{
+      background:#01DF3A;
+    }
+    #menus-item:hover{
+      background:red;
+    }
     .bodys{
        margin-top:30px;
     }
@@ -47,68 +53,99 @@
    <body class="h-100">
       <nav class="navbar navbar-expand-sm navbar-dark sticky-top menus bg-success">
       <img src="statics/logo.png"  style="padding-top:7px;margin-right:100px;" width="120" >
-         <!-- <a class="navbar-brand" href="#">Manajemen Desa</a> -->
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon "></span>
          </button>
-         
-         <nav class="collapse navbar-collapse" id="sidebar">
+       </nav>  
+         <nav class="collapse navbar-collapse" style="background:#42BA40;" id="sidebar">
                      
-         <ul class="navbar-nav d-sm-none">
-            <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=dashboard">
+         <ul class="navbar-nav ml-3  d-sm-none  " style="margin-right:10%">
+            <li class="nav-item "> 
+               <a class="nav-link ml-3 text-white" href="?hal=dashboard">
                   <i class="fas fa-home mr-2" style="font-size:20px;" ></i>Dashboard
                </a> 
             </li>
 
-            <li class="list-group-item bg-dark"> 
-                  <a class="nav-link text-white" href="?hal=potensi_desa">
-                  <i class="fas fa-heart mr-sm-2" style="font-size:20px;" ></i> Potensi Desa
-                  </a>
-               </li>
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
+            <li class="nav-item"> 
+               <a class="nav-link ml-3 text-white" href="?hal=potensi_desa">
+                  <i class="fas fa-heart mr-2" style="font-size:20px;"></i>Potensi Desa
+               </a> 
+            </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
                
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=profile">
+               <a class="nav-link ml-3 text-white" href="?hal=profile">
                   <i class="fas fa-user-cog mr-2" style="font-size:20px;"></i>Profile
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+            
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=layanan_publik">
-                  <i class="fab fa-chromecast mr-2" style="font-size:20px;"></i>  Layanan publik
+               <a class="nav-link ml-3 text-white" href="?hal=layanan_publik">
+                  <i class="fab fa-chromecast mr-2" style="font-size:20px;"></i>Layanan publik
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+            
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=user">
+               <a class="nav-link ml-3 text-white" href="?hal=user">
                   <i class="fas mr-2 fa-users" style="font-size:20px;"></i>Data User
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=galeri">
+               <a class="nav-link ml-3 text-white" href="?hal=galeri">
                   <i class="fas  mr-2 fa-images" style="font-size:20px;"></i>Galeri
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=kabar_desa">
+               <a class="nav-link ml-3 text-white" href="?hal=kabar_desa">
                   <i class="fas mr-2 fa-file-signature" style="font-size:20px;"></i>Kabar desa
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=kegiatan">
-                  <i class="fas mr-2 fa-life-ring" style="font-size:20px;"></i> Kegiatan
+               <a class="nav-link ml-3 text-white" href="?hal=kegiatan">
+                  <i class="fas mr-2 fa-life-ring" style="font-size:20px;"></i>Kegiatan
                </a> 
             </li>
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="?hal=struktur">
+               <a class="nav-link ml-3 text-white" href="?hal=struktur">
                  <i class="fas  mr-2 fa-project-diagram " style="font-size:20px;"></i>Struktur
                </a> 
             </li>
-           
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
             <li class="nav-item"> 
-               <a class="nav-link text-white" href="index.php">
-                <i class="fas mr-2 fa-sign-out-alt" style="font-size:20px;"></i> Keluar
+               <a class="nav-link ml-3 text-white" href="?hal=pengaturan">
+                 <i class="fas  mr-2 mr-sm-2 fa-cogs " style="font-size:20px;"></i>Pengaturan
                </a> 
             </li>
-            
+
+            <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
+
+            <li class="nav-item"> 
+               <a class="nav-link ml-3 text-white" href="index.php">
+                <i class="fas mr-2 fa-sign-out-alt" style="font-size:20px;"></i>Keluar
+               </a> 
+            </li>
+
          </ul>
          </nav>
       </nav>
@@ -118,7 +155,7 @@
          <nav class="col-md-2 col-sm-3 bg-dark h-100 p-0 position-absolute d-none d-sm-block"  >
             
             <ul class="list-group   list-group-flush" >
-               <li class="list-group-item bg-dark"> 
+               <li class="list-group-item bg-dark" id="menus-item"> 
                   <a class="nav-link text-white" href="?hal=dashboard">
                   <i class="fas fa-home mr-sm-2" style="font-size:20px;" ></i> Dashboard
                   </a>
@@ -223,100 +260,7 @@
            $('#keterangan').summernote();
         });
 
-        var ctx = document.getElementById('myChart').getContext('2d');
-         var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-               labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-               datasets: [{
-                     label: '# of Votes',
-                     data: [12, 19, 3, 5, 2, 3],
-                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                     ],
-                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                     ],
-                     borderWidth: 1
-               }]
-            },
-            options: {
-               scales: {
-                     yAxes: [{
-                        ticks: {
-                           beginAtZero: true
-                        }
-                     }]
-               }
-            }
-         });
-
-         var ctx = document.getElementById('myChart2').getContext('2d');
-         var myChart = new Chart(ctx, {
-            type: 'horizontalBar',
-            data: {
-               labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-               datasets: [{
-                   
-                     // barPercentage: 0.5,
-                     // barThickness: 6,
-                     // maxBarThickness: 8,
-                     // minBarLength: 2,
-                     label: '# of Votes',
-                     data: [12, 19, 3, 5, 2, 3],
-                     backgroundColor: ["#FF8000","#FF8000","#FF8000","#FF8000","#FF8000","#FF8000"
-                        // 'rgba(255, 99, 132, 0.2)',
-                        // 'rgba(54, 162, 235, 0.2)',
-                        // 'rgba(255, 206, 86, 0.2)',
-                        // 'rgba(75, 192, 192, 0.2)',
-                        // 'rgba(153, 102, 255, 0.2)',
-                        // 'rgba(255, 159, 64, 0.2)'
-                     ],
-                     // borderColor: [
-                     //    'rgba(255, 99, 132, 1)',
-                     //    'rgba(54, 162, 235, 1)',
-                     //    'rgba(255, 206, 86, 1)',
-                     //    'rgba(75, 192, 192, 1)',
-                     //    'rgba(153, 102, 255, 1)',
-                     //    'rgba(255, 159, 64, 1)'
-                     // ],
-                     // borderWidth: 1
-               }]
-            },
-            // circular:true;
-            options: {
-               scales: {
-                     // yAxes: [{
-                     //    ticks: {
-                     //       beginAtZero: true
-                     //    }
-                     // }]
-
-                     xAxes: [{
-                           gridLines: {
-                              offsetGridLines: true
-                           }
-                     }]
-
-                     // xAxes: [{
-                     //    stacked: true
-                     // }],
-                     // yAxes: [{
-                     //    stacked: true
-                     // }]
-               }
-            }
-         });
+        
      </script>
    </body>
 </html>

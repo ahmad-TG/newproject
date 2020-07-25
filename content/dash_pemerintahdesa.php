@@ -1,47 +1,43 @@
-<div class="row" id="box-search" style="margin-top:-30px;">
-   <!-- <div class="thumbnail"> -->
-   <img src="statics/layananbanner.jpg" class="imgs" style="width:100%;height:400px;z-index:-2">
-         <div class="caption text-left text-white responsives" >
-         <div class="text-white"><h2><u>Struktur Pemerintahan </u></h2></div>
-          <div style="height:20px"></div>
-            <div class="fonts">
-               <p>Temukan berbagai informasi mengenai semua Kegiatan desa di laman ini.</p>
+
+      <div class="text-success mx-lg-5 mx-3">
+         <h2><u>Pemerintah Desa Kudukeras</u></h2>
+      </div>
+      <div class=" row  mt-3"  >
+         <div class="col" >
+               <div class="row justify-content-center " id="box-search">
+                     <?php
+                        $ids = mysqli_query($con, "SELECT * FROM struktur ORDER BY struktur.sort ");
+                        while($data = mysqli_fetch_array($ids)){
+                     ?>
+                  <div class="gallery  potret-desa justify-content-center" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                     <a target="_blank" href="images/<?= $data['foto'] ?>">
+                        <img src="images/<?= $data['foto'] ?>" alt="Cinque Terre"   >
+                     </a>
+                     <div class="desc"><?= $data['nama'];?></div>
+                     <div style="font-size:16px;text-align:center"><?= $data['jabatan'];?></div>
+                  </div>
+               <?php
+                  }
+               ?> 
             </div>
          </div>
-      
-      <!-- </div> -->
-   <!-- </div> -->
-</div>
-          <div class=" row  mt-3"  >
-            <div class="col" >
-                <div class="row justify-content-center  mx-2" id="box-search">
-                      <?php
-                          $ids = mysqli_query($con, "SELECT * FROM struktur ORDER BY struktur.sort ");
-                          while($data = mysqli_fetch_array($ids)){
-                      ?>
-                          <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                                <a target="_blank" href="images/<?= $data['foto'];?>">
-                              <img src="images/<?= $data['foto'];?>" alt="Cinque Terre"  >
-                          </a>
-                            <div class="desc"><?= $data['nama'];?></div>
-                            <div style="font-size:20px;text-align:center"><?= $data['jabatan'];?></div>
-                        </div>
-                      <?php
-                    }
-                  ?>
-                </div>
-            </div>
-        </div>
       </div>
-    </div>
-
+    
 
       <style>
+      .img-str{
+         width:100%;
+         height:60%;
+      }
+      .potret-desa{
+       width:20%;
+        
+      } 
  div.gallery {
   margin: 5px;
   border: 1px solid #777;
   float: left;
-  width: 250px;
+  width: 15%;
 }
 
 div.gallery:hover {
@@ -50,14 +46,15 @@ div.gallery:hover {
 
 div.gallery img {
   width: 100%;
-  height: auto;
+  height: 70%;
 }
 
 div.desc {
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
+   font-size:90%;
+   padding-top: 15px;
+   padding-left: 15px;
+   padding-right: 15px;
+   text-align: center;
 }
 .thumbnail {
     position: relative;
@@ -89,6 +86,23 @@ div.desc {
     border-radius: 10px;
 }
 @media screen and (max-width: 480px){
+   div.gallery {
+  
+   width: 40%;
+   }
+   div.gallery img {
+  width: 100%;
+  height: 60%;
+}
+
+div.desc {
+   font-size:100%;
+   padding-top: 2px;
+   padding-left: 2px;
+   padding-right: 2px;
+  
+}
+           
             .kabarberita{ 
                background: red; 
                max-width:10rem;
@@ -119,9 +133,11 @@ div.desc {
          }
          @media screen and (min-width: 481px) {
            
-            /* .kabarberitautama{
-                  display:none;
-               } */
+            div.gallery {
+  
+  width: 40%;
+  }
+       
                .img2{
                   width:280px;
                   height:180px;
@@ -137,14 +153,10 @@ div.desc {
                   font-size:30px;
                }
          }
-         /* @media screen and (min-width: 960px){
+         @media screen and (min-width: 960px){
             
-            .img2{
-                  width:280px;
-                  height:180px;
-               }
-               .resjudul{
-                  display:none;
-               }
-         } */
+            div.gallery {
+            width: 20%;
+            }
+         }
 </style>

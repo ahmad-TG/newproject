@@ -3,35 +3,83 @@
 ?>
 
 <h2 class="judul">Profile</h2>
-<a class="btn mb-4 btn-primary  ml-2" href="?hal=galeri_tambah"> <i class="fas fa-plus mr-sm-2" ></i>Tambah</a>
-<div class="table-responsive-lg">
-<table class="table table-striped table-bordered compact hover " style="width:100%">
-<caption>List of users</caption>
-   <thead style="background:#379538;">
-      <tr class="text-white">
-         <th>No</th>
-         <th>Foto</th>
-         <th>Title</th>
-         <th>Update By</th>
-         <th>Update Time</th>
-         <th width="280px;">Aksi</th>
-      </tr>
-   </thead>
-   <tbody>
-<div>
-<label for="">Nama Desa</label> : Kudukeras
-<p><label for="">Kecamatan</label>
-<p><label for="">Kabupaten</label>
-<p><label for="">Provinsi</label>
-<p><label for="">Negara</label>
-<p><label for="">Jumlah RT</label>
-<p><label for="">Jumlah RW</label>
-<p><label for="">Jumlah KK</label>
-
-
+<div class="card text-center">
+   <div class="card-header">
+      SEJARAH DESA
+   </div>
+   <div class="card-body">
+      <h5 class="card-title">Sejarah Desa Kudukeras</h5>
+      <p class="card-text">isi sejarah</p>
+      <a href="#" class="btn btn-primary">Edit</a>
+   </div>
+   <div class="card-footer text-muted">
+      2 days ago
+   </div>
 </div>
-<h2 class="judul">Tampilan Dashboard</h2>
-<h2 class="judul">Tampilan Table</h2>
+
+<div class="card text-center mt-3" style="overflow-x: hidden;">
+  <div class="card-header">
+   VISI DAN MISI
+  </div>
+  <div class="row " style="background:#f8f9fa;"  >
+      <div class="col mb-2" style="min-width:250px;">
+         <div class="card-body bg-white " >
+            <h5 class="card-title ">VISI</h5>
+            <p class="card-text">isi visi</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+         </div>
+      </div>
+      <div class="col " style="min-width:250px">
+         <div class="card-body bg-white">
+            <h5 class="card-title ">MISI</h5>
+            <p class="card-text">isi misi</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+         </div>
+      </div>
+   </div>
+   <div class="card-footer text-muted">
+      2 days ago
+   </div>
+</div>
+
+<div class="card text-center mt-3" style="overflow-x: hidden;">
+  <div class="card-header">
+   CONTACT BANTUAN
+  </div>
+  <div class="row " style="background:#f8f9fa;"  >
+
+      <div class="col mb-2" style="min-width:250px;">
+         <div class="card-body bg-white " >
+            <h5 class="card-title ">SMS</h5>
+            <p class="card-text">0856766247165</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+         </div>
+      </div>
+
+      <div class="col " style="min-width:250px">
+         <div class="card-body bg-white">
+            <h5 class="card-title ">Whatsapp</h5>
+            <p class="card-text">09877366612</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+         </div>
+      </div>
+
+      <div class="col " style="min-width:250px">
+         <div class="card-body bg-white">
+            <h5 class="card-title ">E-mail</h5>
+            <p class="card-text">ahmadroyani913@gmail.com</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+         </div>
+      </div>
+
+   </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+
+
 
 
 

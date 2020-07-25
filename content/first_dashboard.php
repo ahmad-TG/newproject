@@ -30,29 +30,29 @@
 
    <div class="row py-lg-5 justify-content-center " style="margin-top: 2rem;">
          
-      <div class="col-auto pt-lg-1" style="margin-top: 2rem; ">
+      <a href="?hal=dash_desa" class="col-auto pt-lg-1 " style="margin-top: 2rem; ">
          <div class="card cards  justify-content-center text-center" style="min-width: 18rem;z-index: -1;">
             <img src="statics/menuprofil.png" class=" card-img-top" alt="...">
             <div class="card-body">
-               <h4>Profile</h4> 
+               <h4 class="mmm">Profile</h4> 
                <p class="card-text ">Some quick example text to build on the card title and make up
                   the bulk of the card's content.</p>
             </div>
          </div>
-      </div>
+      </a>
 
-      <div class="col-auto pt-lg-1" style="margin-top: 2rem;">
+      <a href="?hal=dash_kabardesa"  class="col-auto pt-lg-1" style="margin-top: 2rem;">
          <div class="card cards  justify-content-center text-center" style="min-width: 18rem;z-index: -1;">
             <img src="statics/kabardesa.png" class=" card-img-top" alt="...">
             <div class="card-body">
-               <h4>Layanan Publik</h4> 
+               <h4>Kabar Desa</h4> 
                <p class="card-text ">Some quick example text to build on the card title and make up
                   the bulk of the card's content.</p>
             </div>
          </div>
-      </div>
+      </a>
 
-      <div class="col-auto pt-lg-1" style="margin-top: 2rem;">
+      <a href="?hal=dash_layanandesa"  class="col-auto pt-lg-1" style="margin-top: 2rem;">
          <div class="card cards  justify-content-center text-center" style="min-width: 18rem;z-index: -1;">
             <img src="statics/layanandesa.png" class=" card-img-top" alt="...">
             <div class="card-body">
@@ -61,7 +61,7 @@
                   the bulk of the card's content.</p>
             </div>
          </div>
-      </div>
+      </a>
         
    </div>
 
@@ -79,16 +79,16 @@
          </div>
        
          <div class="row justify-content-center" >
-            <div class="col-sm-4 py-3 bg-white kabarberitautama" style="margin-right:5px" >
+            <div class="col-sm-4 py-3 bg-white kabarberitautama"  style="margin-right:5px" >
                   <?php
                      $query = mysqli_query($con, "SELECT  * FROM kabar_desa  ORDER BY kabar_desa.id DESC LIMIT 1 ");
                      $no = 0;
                      while($data = mysqli_fetch_array($query)){
                         $no++;
                   ?>
-                  <div class="clearfix py-2 " max-width="645px"  >
-                        <img class=" " src="images/<?= $data['foto'] ?>" alt="Pineapple" width="99%" style="border-radius: 8px;margin-top:-8px;margin-bottom:-8px;margin-left:2px;margin-right:2px;">
-                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky; border-radius: 8px">
+                  <div class="clearfix py-2 " max-width="645px"  style="overflow-x: hidden;" >
+                        <img class=" " src="images/<?= $data['foto'] ?>" alt="Pineapple" width="99%" style="margin-top:-8px;margin-bottom:-8px;margin-left:2px;margin-right:2px;">
+                        <div class="mx-auto bg-white" style="width:90%;margin-top:-60px;position:sticky; ">
                            
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
                                <h3 class="mt-0" style="text-align:justify; padding-left:10px;padding-right:10px;"><?= $data['title'] ?></h3>
@@ -105,7 +105,7 @@
                      }
                   ?>
             </div>
-            <div class="col pb-1 mobile " style="min-width:300px;max-width:500px;" >
+            <div class="col pb-1 mobile " style="min-width:300px;max-width:500px;"  >
                   <?php
                     
                      $limit= 3;
@@ -115,11 +115,11 @@
                         $no++;
                   ?>
             
-                     <div class="row no-gutters bg-white  position-relative">
+                     <div class="row no-gutters bg-white  position-relative" style="overflow-x: hidden;" >
                         <div class="col-md-6 mb-md-0 p-md-3">
-                           <img src="images/<?= $data['foto'] ?>" width="100%" class="img-mb" style="border-radius: 8px;" alt="...">
+                           <img src="images/<?= $data['foto'] ?>" width="100%" class="img-mb"  alt="...">
                         </div>
-                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0" style="border-radius: 8px">
+                        <div class="col-md-6 mx-auto position-sticky mb p-4 pl-md-0" style="border-radius: 8px" >
                          <a href="?hal=fullberita&id=<?= $data['id'] ?>" >
                                <h5 class="mt-0 mb-uraian" ><?= $data['title'] ?></h5>
                          </a>
@@ -138,7 +138,6 @@
                   <?php
                      }
                   ?>
-                  <!-- <a href="?hal=fullberita&id=<?= $data['id'] ?>"  >Baca Selengkapnya...</a> -->
                   <div class="h4 py-2"  style="text-align:center;cursor: pointer;" > 
                   <a href="?hal=allberita" > <u>Berita Lainnya</u></a>
                  </div>
@@ -157,49 +156,26 @@
                <div class="row justify-content-center" >
                   <div class="col-8 py-3" max-width="200px">
                      <div class="text-success mb-2"><h3><u>Potret Desa</u></h3></div>
-                     <!-- <div style="height:30px"></div> -->
                   </div>
                </div>
-               <div class="row justify-content-center  mx-2" id="box-search">
-           
-                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                        <a target="_blank" href="images/1.png">
-                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
+               <div class="row justify-content-center " id="box-search">
+                  <?php
+                     $limit= 4;
+                     $query = mysqli_query($con, "SELECT * FROM galeri  ORDER BY galeri.id DESC LIMIT $limit  ");
+                     while($data = mysqli_fetch_array($query)){
+                  ?>
+
+                     <div class="gallery potret-desa justify-content-center" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
+                        <a target="_blank" href="images/<?= $data['foto'] ?>">
+                           <img src="images/<?= $data['foto'] ?>" alt="Cinque Terre" style="width:248px;height:150px">
                         </a>
-                        <div class="desc">Judul Potret desa</div>
+                        <div class="desc"><?= substr($data['title'],0, 30); ?></div>
                      </div>
 
-                     
-                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                        <a target="_blank" href="images/1.png">
-                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
-                        </a>
-                        <div class="desc">Judul Potret desa</div>
-                     </div>
-
-                     
-                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                        <a target="_blank" href="images/1.png">
-                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
-                        </a>
-                        <div class="desc">Judul Potret desa</div>
-                     </div>
-
-                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                        <a target="_blank" href="images/1.png">
-                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
-                        </a>
-                        <div class="desc">Judul Potret desa</div>
-                     </div>
-
-                     <div class="gallery" style="margin-right:1%;background:#E6E6E6;margin-top:1%;">
-                        <a target="_blank" href="images/1.png">
-                           <img src="images/1.png" alt="Cinque Terre" width="600" height="400">
-                        </a>
-                        <div class="desc">Judul Potret desa</div>
-                     </div>
-
-                     
+                  <?php
+                     }
+                  ?> 
+                    
                </div>
 
             </div>
@@ -225,11 +201,20 @@
             </button>
             </div>
             <div class="modal-body">
+                     
+               <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
+                  <button type="button" class="btn btn-outline-primary  form-control">App</button>
+               </a><p class="my-3">
+
                <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
                   <button type="button" class="btn btn-outline-primary  form-control">Whatsap</button>
                </a><p class="my-3">
                <a class="  btn-chat " href="sms:<?= $no ?>?body=Hallo Admin"  role="button">
                   <button type="button" class="btn form-control btn-outline-primary"> SMS </button>
+               </a>
+               <p class="my-3">
+               <a  href ="mailto:ahmadroyani913@mail.com "  role="button">
+                  <button type="button" class="btn form-control btn-outline-primary"> Email </button>
                </a>
             </div>
             <div class="modal-footer">
@@ -243,6 +228,16 @@
 
 
  <style>
+ a {
+color:black;
+text-decoration:none;
+}
+a:hover{
+   color:#088A68;
+   font-style:italic;
+   text-decoration:none;
+}
+
  div.gallery {
   margin: 5px;
   border: 1px solid #777;
@@ -299,7 +294,15 @@ div.desc {
     font-size: 20px;
     border-radius: 10px;
 }
+.potret-desa{
+   width:100%;
+   height:200px;
+}
 @media screen and (max-width: 480px){
+            .potret-desa{
+               width:600px;
+               height:200px;
+            }
             .rows{
                width:40%;
             }

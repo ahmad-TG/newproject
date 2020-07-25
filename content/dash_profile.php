@@ -7,11 +7,11 @@
 
 <div class="row" style="margin-top:20px">
    <div class="col-md-12 desktop-judul" style="margin-bottom:20px;padding-top:35px">
-      <div class="card mb -2 box" >
+      <div class=" mb-2 box" >
          <div id="grad1">
             <div class=" text-center mt-lg-3 ">MISI</div>
             <div style="height:2px ; font-size:20px"></div>
-               <div id="center">
+               <div id="center" style="padding-left:30px;padding-right:30px;">
                   <p>Terwujudnya Masyarakat Desa yang Makmur, Agamis, dan Berkeadilan, </p>
                   <p>yang Didukung oleh Sarana Prasarana yang Memadai dan Aparatur Pemerintahan yang Handal. </p>
                </div>
@@ -20,8 +20,8 @@
       </div>
    </div>
 
-   <div class="col-md-13">
-      <div class="card mb -3 box">
+   <div class="col-md-13 bg-success">
+      <div class=" mb-3 box ">
          <div id="grad2">
             <div class=" text-center mt-lg-3">VISI</div>
          <div style="height:2px ; font-size:20px"></div>
@@ -47,7 +47,7 @@
    background-image: linear-gradient(#7fedab,#7bed68);
 }
 #grad2 {
-   height: 450px;
+   /* height: 450px; */
    background-color : #7bed68;
    background-image: linear-gradient(#7bed68,#7fedab);
 }
@@ -56,7 +56,7 @@
    text-align: center;
 }
 #center1{
-   padding : 20px 0px;
+   /* padding : 20px 0px; */
    text-align : center;
    
 }
