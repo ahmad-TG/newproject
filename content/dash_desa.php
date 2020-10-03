@@ -30,20 +30,20 @@
 </div>
 
 <div class="button-mobile" style=" margin-top:50px;margin-bottom:50px;"> 
-   <a class="btn btn-outline-success  btn-xl btn-block" href="?hal=dash_sejarah" role="button">Sejarah</a>
+   <a class="btn btn-outline-success  btn-xl btn-block" href="?hal=dash_sejarah" role="button"> Sejarah</a>
    <a class="btn btn-outline-success  btn-xl btn-block" href="?hal=dash_geografis" role="button">Geografis</a>
-   <a class="btn btn-outline-success  btn-xl btn-block" href="?hal=dash_pemerintahdesa" role="button">Pemerintah Desa</a>
+   <a class="btn btn-outline-success  btn-xl btn-block" href="?hal=dash_pemerintahdesa" role="button">Anggota Perangkat Desa</a>
 </div>
 
 <div id="down" class="row justify-content-center q-gutter-lg button-desktop" href="down" style="margin-top:90px; margin-bottom:90px;">
    <div class="col-auto" max-width="200px">
-      <a href="?hal=dash_sejarah" role="button" class="btn btn-outline-success btn-xl mt-2 btn-block"><i class="fa fa-book" aria-hidden="true"></i><b>Sejarah</b> </a>
+      <a href="?hal=dash_sejarah" role="button" class="btn btn-outline-success btn-xl mt-2 btn-block"><i class="fa fa-book" aria-hidden="true"></i><b> Sejarah</b> </a>
    </div>
    <div class="col-auto">
       <a href="?hal=dash_geografis" role="button" class="btn btn-outline-success btn-xl mt-2"><b>Geografis</b> </a>
    </div>
    <div class="col-auto">
-      <a href="?hal=dash_pemerintahdesa" role="button" class="btn btn-outline-success btn-xl mt-2"><b>Pemerintah Desa</b> </a>
+      <a href="?hal=dash_pemerintahdesa" role="button" class="btn btn-outline-success btn-xl mt-2"><b>Anggota Perangkat Desa</b> </a>
    </div>
 </div>
 

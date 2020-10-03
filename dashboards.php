@@ -132,11 +132,11 @@
 
             <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
 
-            <li class="nav-item"> 
+            <!-- <li class="nav-item"> 
                <a class="nav-link ml-3 text-white" href="?hal=pengaturan">
                  <i class="fas  mr-2 mr-sm-2 fa-cogs " style="font-size:20px;"></i>Pengaturan
                </a> 
-            </li>
+            </li> -->
 
             <li class="nav-item" style="width:100%; height:1px; background: #A9F5A9;margin-right:100px;"> </li>
 
@@ -169,7 +169,7 @@
                <!-- sampai sini -->
                <li class="list-group-item bg-dark"> 
                   <a class="nav-link text-white" href="?hal=profile">
-                     <i class="fas fa-user-cog mr-sm-2" style="font-size:20px;"></i> Setting
+                     <i class="fas fa-user-cog mr-sm-2" style="font-size:20px;"></i> Profile
                   </a> 
                </li>
                <li class="list-group-item bg-dark"> 
@@ -203,11 +203,11 @@
                   </a> 
                </li>
 
-               <li class="list-group-item bg-dark"> 
+               <!-- <li class="list-group-item bg-dark"> 
                   <a class="nav-link text-white" href="?hal=pengaturan">
                      <i class="fas  mr-sm-2 fa-cogs " style="font-size:20px;"></i> Pengaturan
                   </a> 
-               </li>
+               </li> -->
 
                <li class="list-group-item bg-dark" > 
                   <a class="nav-link text-white" href="index.php" >

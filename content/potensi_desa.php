@@ -10,22 +10,38 @@
       <tr class="text-white text-center">
          <th>No</th>
          <th>Foto</th>
-         <th>Nama</th>
+         <!-- <th>Nama</th> -->
+         <th>Kategori</th>
+         <th>UpdateBY</th>
+         <th>Update Time</th>
          <th>Deskripsi</th>
-       
          <th width="280px;">Aksi</th>
       </tr>
    </thead>
    <tbody>
 
-      <tr class="text-center">
-         
-         <a class="btn mb-2 btn-primary" href="?hal=potensi_view&id=<?= $data['id'] ?>"><i class="fas fa-eye"></i> View </a>
-            <a class="btn mb-2 btn-success" href="?hal=potensi_edit&id=<?= $data['id'] ?>"><i class="fas fa-edit"></i> Edit </a>
-            <a class="btn mb-2 btn-danger" href="?hal=potensi_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"><i class="fas fa-trash-alt"></i> Delete </a>
-         </td>
-     </tr>
-
+   <?php
+      $query = mysqli_query($con, "SELECT * FROM potensi_desa ");
+      $no = 0;
+      while($data = mysqli_fetch_array($query)){
+         $no++;
+   ?>
+         <tr class="text-center">
+            <td><?= $no ?></td>
+            <td width="250" class="text-center"><img src="images/<?= $data['image'] ?>" width="200" class=" rounded "></td>
+            <td><?= $data['kategori'] ?></td>
+            <td><?= $data['updateby'] ?></td>
+            <td><?= $data['date'] ?></td>
+            <td><?=  substr ($data['uraian'],0, 100) ?></td>
+            <td  width="30px" style="align:center">
+               <a class=" btn btn-primary mt-2 btn-sm "  href="?hal=kabardesa_edit&id=<?= $data['id'] ?>"><i class="fas fa-eye" ></i> View</a>
+               <a class=" btn btn-success btn-sm  mt-2 "  href="?hal=kabardesa_edit&id=<?= $data['id'] ?>"><i class="fas fa-edit" ></i> Edit</a>
+               <a class=" btn btn-danger btn-sm mt-2 " href="?hal=kabardesa_hapus&id=<?= $data['id'] ?>&foto=<?= $data['foto'] ?>"><i class="fas fa-trash-alt"></i> Delete </a>
+            </td>
+      </tr>
+   <?php
+      }
+   ?>
    </tbody>
 </table>
 </div>

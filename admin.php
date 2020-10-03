@@ -13,6 +13,8 @@
 
       "kabar_berita","kabarberita_tambah", "kabarberita_insert","kabarberita_hapus","kabarberita_update","kabarberita_edit",
       "potensi_desa","potensi_tambah", "potensi_insert","potensi_hapus","potensi_update","potensi_edit",
+      
+      "profile_sejarah","profile_visi","profile_misi","profile_sms","profile_whatsapp","profile_email"
 
       // url dashboards
       // "dash_desa","dash_statistik","dash_layanandesa","dash_potensidesa","dash_kabardesa","dash_sejarah","dash_geografis","dash_pemerindahdesa",

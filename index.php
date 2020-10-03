@@ -3,22 +3,19 @@
   include "library/config.php";
   define('INDEX', true);
 ?>
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-   <head>
-      <title>Dashboard</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/dash_style.css" type="text/css">
-      <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
-      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-      <Style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dash_style.css" type="text/css">
+   <link rel="stylesheet" href="plugin/fontawesome/css/all.css">
+   <Style>
          .separator{
             margin-top:5px;
             margin-bottom:5px;
@@ -46,7 +43,7 @@
             font-size:13px;
          }
 
-         @media screen and (max-width: 480px){
+         /* @media screen and (max-width: 480px){
             
             .bg-mb{
                margin-left:-10px;
@@ -82,11 +79,11 @@
                margin-bottom:-10px;
                background:#42BA40;
             }
-            /* .show{
+             /* .show{
                display:none;
             } */
 
-            .mb{
+            /* .mb{
                  width:90%;
                  background:white;
                  margin-top:-60px;
@@ -102,11 +99,12 @@
                display:none;
             }
            
-         }
+         } */ 
       </Style>
-     
-   </head>
-   <body class="bgr">
+    <title>Hello, world!</title>
+  </head>
+    
+  <body class="bgr">
    
       <?php
       $id=1;
@@ -133,7 +131,23 @@
                         <a class="nav-link fontsize text-white active" href="?hal=first_dashboard">HOME</a>
                      </li>
                      <li class="nav-item ">
-                        <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a>
+                        <!-- <a class="nav-link  fontsize text-white " href="?hal=dash_desa">DESA</a> -->
+                        <div class="dropdown">
+                        <a class="nav-link fontsize text-white active "  href="#"  data-toggle="dropdown" >
+                        DESA
+                        </a>
+                        <div class="dropdown-menu " >
+                           <!-- <a class="dropdown-item  " href="?hal=dash_sejarah" role="button"> Sejarah</a> -->
+                           
+                           <a class="dropdown-item dropdown-toggle"   data-toggle="dropdown" > Profile </a>
+                              <div class="dropdown-menu position-absolute ml-1" style="left: 100%; top:0;cursor: pointer;" >
+                                 <a class="dropdown-item  " href="?hal=dash_sejarah" role="button"> Sejarah</a>
+                                 <a class="dropdown-item  " href="?hal=dash_profile" role="button"> Visi & Misi</a>
+                                 <a class="dropdown-item  " href="?hal=dash_geografis" role="button">Letak Geografis</a>
+                              </div>
+                           <a class="dropdown-item  " href="?hal=dash_pemerintahdesa" role="button">Anggota Perangkat Desa</a>
+                        </div>
+                     </div>
                      </li>
 
                      <li class="nav-item">
@@ -146,18 +160,21 @@
                         <a class="nav-link fontsize text-white" href="?hal=dash_kabardesa">KABAR DESA</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa">GALERI DESA</a><a >
+                        <a class="nav-link fontsize text-white" href="?hal=dash_galeridesa" >GALERI DESA</a><a >
+                        
                      </li>
+
                      <!-- <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="#" data-toggle="modal" data-target="#staticBackdrop">BANTUAN</a><a >
                      </li> -->
                      <li class="nav-item">
                         <a class="nav-link fontsize text-white" href="login.php" >LOGIN</a>
                      </li>
+
                   </ul>
+                  
                </div>
             </span>
-         
          </div>
          
       </nav>
@@ -217,12 +234,10 @@
 
       </footer>
 
-      
-
-      <!-- <script src="bootstrap/js/bootstrap.bundle.min.js"></script> -->
-      <!-- <script src="js/jquery-3.5.0.min.js"></script> -->
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-   </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>

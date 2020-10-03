@@ -73,7 +73,7 @@
       <div class="col" >
          <div class="row justify-content-center" >
             <div class="col-8 py-3" max-width="200px">
-               <div class="text-success subkabar"><h3><u>Kabar Berita</u></h3></div>
+               <div class="text-success subkabar"><h3><u>Kabar Desa</u></h3></div>
                <div style="height:30px"></div>
             </div>
          </div>
@@ -155,7 +155,7 @@
             <div class="col" >
                <div class="row justify-content-center" >
                   <div class="col-8 py-3" max-width="200px">
-                     <div class="text-success mb-2"><h3><u>Potret Desa</u></h3></div>
+                     <div class="text-success mb-2"><h3><u>Galeri Desa</u></h3></div>
                   </div>
                </div>
                <div class="row justify-content-center " id="box-search">
@@ -185,12 +185,18 @@
 
    <div class="row">
     <div class="col-auto offset-9  rows fixed-bottom " style="margin-bottom:3%;cursor: pointer;" href="#" style="float:right" data-toggle="modal" data-target="#exampleModal"  role="button">
-      <img src="statics/live.png" alt="customer" class="width-img " min-width="200px" >
+      <img src="statics/Live.png" alt="customer" class="width-img " min-width="200px" >
     </div>
   </div>
+
+
   
    <!-- Modal -->
-   <?php $no=+6285884110485;?>
+   <?php
+    $query = mysqli_query($con, "SELECT * FROM profile WHERE id='1'");
+    $CP = mysqli_fetch_array($query);
+   ?>
+   
    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
          <div class="modal-content">
@@ -202,18 +208,18 @@
             </div>
             <div class="modal-body">
                      
-               <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
-                  <button type="button" class="btn btn-outline-primary  form-control">App</button>
+               <a class="  btn-chat " href="#"  role="button" >
+                  <button type="button" class="btn btn-outline-primary  form-control" data-toggle="modal" data-target="#app"  role="button">App</button>
                </a><p class="my-3">
 
-               <a class="  btn-chat " href="https://api.whatsapp.com/send?phone=<?= $no ?>&text=Hallo Admin"  role="button" >
+               <a class="  btn-chat " href="https://api.whatsapp.com/send?phone= <?= $CP['whatsapp'] ?>&text=Hallo Admin"  role="button" >
                   <button type="button" class="btn btn-outline-primary  form-control">Whatsap</button>
                </a><p class="my-3">
-               <a class="  btn-chat " href="sms:<?= $no ?>?body=Hallo Admin"  role="button">
+               <a class="  btn-chat " href="sms:<?= $CP['sms'] ?>?body=Hallo Admin"  role="button">
                   <button type="button" class="btn form-control btn-outline-primary"> SMS </button>
                </a>
                <p class="my-3">
-               <a  href ="mailto:ahmadroyani913@mail.com "  role="button">
+               <a  href ="mailto:<?= $CP['email'] ?> "  role="button">
                   <button type="button" class="btn form-control btn-outline-primary"> Email </button>
                </a>
             </div>
@@ -223,6 +229,54 @@
          </div>
       </div>
    </div>
+
+   <!-- Modal App-->
+<div class="modal fade" id="app" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="app">Pesan App</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body float-center ">
+            <form method="post" action="?hal=customer_service" enctype="multipart/form-data">
+               <div class="form-group row">
+                  <label for="no_ktp" class="col col-form-label ml-2">No KTP</label>
+                  <div class="col-sm-10">
+                     <input type="text" class="form-control" id="no_ktp" name="no_ktp">
+                  </div>
+               </div>
+
+               <div class="form-group row">
+                  <label for="nama_lengkap" class="col col-form-label ml-2"> Nama Lengkap</label>
+                  <div class="col-sm-10">
+                     <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap">
+                  </div>
+               </div>
+
+               <div class="form-group row">
+                  <label for="pesan" class="col col-form-label ml-2"> Pesan Singkat</label>
+                  <div class="col-sm-10">
+                     <textarea class="form-control" style="min-height:100px;" id="pesan" name="pesan" ></textarea>
+                  </div>
+               </div>
+               <div class="form-group row justify-content-center mt-4">
+                  <div></div>
+                  <div class="col ">
+                     <button type="submit" class="btn form-control btn-outline-primary"> Kirim </button>
+                  </div>
+                  <div class="col ">
+                     <button type="reset" data-dismiss="modal" class="btn form-control btn-outline-primary"> Close </button>
+                  </div>
+               </div>
+            </form>
+            </div>
+         </div>
+      </div>
+   </div>
+<!-- modal app-->
 
    <div style="margin-bottom:5%;"></div>
 
@@ -234,7 +288,7 @@ text-decoration:none;
 }
 a:hover{
    color:#088A68;
-   font-style:italic;
+   /* font-style:italic; */
    text-decoration:none;
 }
 

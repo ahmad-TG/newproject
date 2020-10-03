@@ -9,7 +9,7 @@
       <div class="col mb-2" style="min-width:70%;">
          <div class="card-body bg-white " style="overflow-x: hidden;"  >
          <!-- <h5 class="card-title ">Sample</h5> -->
-            <iframe src="http://localhost/aplikasidesa/index.php?hal=bg-setting"
+            <iframe src="http://kudukeras.epizy.com/"
                width="100%" 
                height="600px"
                frameborder="0" 
@@ -41,13 +41,13 @@
               <a href="#" class="btn btn-primary">Edit</a>
           </div>
 
-          <div class="card-body bg-white  mb-3">
-              <h5 class="card-title ">Pengaturan Thema</h5>
-              <input type="text" id="hasil" name="hasil">
+          <!-- <div class="card-body bg-white  mb-3">
+              <h5 class="card-title ">Pengaturan Thema</h5> -->
+              <!-- <input type="text" id="hasil" name="hasil"> -->
              
               <!-- <a href="#"  class="btn btn-primary">Edit</a> -->
-              <input type="button" value="+" onClick="tambah()">
-          </div>
+              <!-- <input type="button" value="+" onClick="tambah()"> -->
+          <!-- </div> -->
       </div>
    </div>
   <div class="card-footer text-muted">
@@ -62,7 +62,7 @@
        }
 </script>
 
-<?php echo $nilai; ?>
+
 
 
 

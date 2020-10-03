@@ -28,9 +28,7 @@
                   <div class="row " id="box-search">
                    
                      <div class="gallery" style="margin-right:5px;background:#E6E6E6;margin-top:5px;">
-                          <a href="?hal=dash_galeri_bykategori&kategori=<?= $data['kategori'] ?>">
-                              <img  src="images/<?= $data['icon'] ?>" style="width: 150px;" alt="Cinque Terre" >
-                          </a>
+                          <img  src="statics/down.png" style="width: 150px;" alt="Cinque Terre" >
                           <div class="desc" style="width: 150px;height:80px;text-align:center"><?= $data['nama_surat'] ?></div>
                         </div>
                    
